@@ -39,7 +39,7 @@
 						<ul>
 							<li><a href="index.html">Homepage</a></li>
 							<li><a href="login.html">Login</a></li>
-							<li class="active"><a href="register.html">Register</a></li>
+							<li class="active"><a href="register.html#main">Register</a></li>
 							<!--<li><a href="twocolumn2.html">Right Sidebar</a></li>-->
 							<!--<li><a href="onecolumn.html">No Sidebar</a></li>-->
 						</ul>
@@ -77,17 +77,17 @@
 								</header>
 									<div class="loginform">
 										<form id="create">
-											<input type="text" name="username" placeholder="Username" class="radius"><br>
-											<input type="text" name="password" placeholder="Password" class="radius"><br>
-											<input type="text" name="repassword" placeholder="Verify Password" class="radius"><br>
-											<input type="text" name="fname" placeholder="First Name" class="radius mini">
-											<input type="text" name="lname" placeholder="Last Name" class="radius mini"><br>
-											<input type="text" name="dob" placeholder="Date of Birth" class="radius"><br>
+											<input type="text" name="username" placeholder="Username" class="radius" required><br>
+											<input type="text" name="password" maxlength=10 placeholder="Password (up to 10 characters)" class="radius" required><br>
+											<input type="text" name="repassword" maxlength=10 placeholder="Verify Password" class="radius" required><br>
+											<input type="text" name="fname" placeholder="First Name" class="radius mini" required>
+											<input type="text" name="lname" placeholder="Last Name" class="radius mini" required><br>
+											<input type="date" name="dob" placeholder="Date of Birth" class="radius" required><br>
 											
-											<input type="text" name="memail" placeholder="Mason Email" class="radius"><br>
-											<input type="text" name="major" placeholder="Major" class="radius"><br>
+											<input type="email" name="memail" placeholder="Mason Email" pattern="*.gmu.edu/i" class="radius" required><br>
+											<input type="text" name="major" placeholder="Major" class="radius" required><br>
 												
-											<input type="submit" value="Submit"
+											<input type="submit" id="registersubmit" value="Submit">
 										</form>
 									</div>
 							</section>
