@@ -21,6 +21,37 @@
 		font-size: 13pt;
 		line-height: 2em;
 	}
+	
+/* 	input
+	{
+		margin-bottom: 10px;
+	} */
+	
+	.loginform
+	{
+		display: block;
+		margin: 4px auto;
+		text-align:left;
+	}
+	
+	.radius
+	{
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+	
+	.loginform input.mini
+	{
+		width:29.75%;
+	}
+	
+	.loginform input
+	{
+		width: 60%;
+		padding: 12px 10px;
+		margin-bottom: 10px;
+	}
 
 	h1,h2,h3,h4,h5,h6
 	{

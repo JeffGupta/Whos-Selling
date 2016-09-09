@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Who's Selling Registration</title>
+		<title>Who's Selling - Registration</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -38,8 +38,8 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="index.html">Homepage</a></li>
-							<li><a href="threecolumn.html">Login</a></li>
-							<li class="active"><a href="register.html">Register</a></li>
+							<li><a href="login.html">Login</a></li>
+							<li class="active"><a href="register.html#main">Register</a></li>
 							<!--<li><a href="twocolumn2.html">Right Sidebar</a></li>-->
 							<!--<li><a href="onecolumn.html">No Sidebar</a></li>-->
 						</ul>
@@ -58,18 +58,13 @@
 						<div id="sidebar" class="4u">
 							<section>
 								<header>
-									<h2>Gravida praesent</h2>
-									<span class="byline">Praesent lacus congue rutrum</span>
+									<h2 align="center">FAQ</h2>
 								</header>
-								<p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. Maecenas luctus lectus at sapien. Consectetuer adipiscing elit.</p>
-								<ul class="default">
-									<li><a href="#">Pellentesque quis lectus gravida blandit.</a></li>
-									<li><a href="#">Lorem ipsum consectetuer adipiscing elit.</a></li>
-									<li><a href="#">Phasellus nec nibh pellentesque congue.</a></li>
-									<li><a href="#">Cras aliquam risus pellentesque pharetra.</a></li>
-									<li><a href="#">Duis non metus commodo euismod lobortis.</a></li>
-									<li><a href="#">Lorem ipsum dolor adipiscing elit.</a></li>
-								</ul>
+								<p><b>Q: Why create an account?</b><br>
+								A: With an account you are able to communicate with other users as well as post your own items to sell.</p>
+								
+								<p><b>Q: Why do you need to know my George Mason email?</b><br>
+								A: With other websites such as craigslist, you never really know who you're meeting. Here at Who's Selling we verify that every user is from George Mason University in order to provide better safety for our users.</p>
 							</section>
 						</div>
 					<!-- Sidebar -->
@@ -78,11 +73,23 @@
 						<div id="content" class="8u skel-cell-important">
 							<section>
 								<header>
-									<h2>Left Sidebar</h2>
-									<span class="byline">Donec leo, vivamus fermentum nibh in augue praesent</span>
+									<h2>Account Registration</h2>
 								</header>
-								<p><a href="#" class="image full"><img src="images/pics02.jpg" alt=""></a></p>
-								<p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo.</p>
+									<div class="loginform">
+										<form id="create">
+											<input type="text" name="username" placeholder="Username" class="radius" required><br>
+											<input type="text" name="password" maxlength=10 placeholder="Password (up to 10 characters)" class="radius" required><br>
+											<input type="text" name="repassword" maxlength=10 placeholder="Verify Password" class="radius" required><br>
+											<input type="text" name="fname" placeholder="First Name" class="radius mini" required>
+											<input type="text" name="lname" placeholder="Last Name" class="radius mini" required><br>
+											<input type="date" name="dob" placeholder="Date of Birth" class="radius" required><br>
+											
+											<input type="email" name="memail" placeholder="Mason Email" pattern="*.gmu.edu/i" class="radius" required><br>
+											<input type="text" name="major" placeholder="Major" class="radius" required><br>
+												
+											<input type="submit" id="registersubmit" value="Submit">
+										</form>
+									</div>
 							</section>
 						</div>
 					<!-- /Content -->
