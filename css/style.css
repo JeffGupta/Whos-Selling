@@ -27,7 +27,14 @@
 		margin-bottom: 10px;
 	} */
 	
-	.loginform
+	.easteregg
+	{
+		position: fixed;
+		left: 40px;
+		z-index: -5;
+	}
+	
+	.registerform
 	{
 		display: block;
 		margin: 4px auto;
@@ -41,17 +48,70 @@
 		border-radius: 5px;
 	}
 	
-	.loginform input.mini
+	.registerform input.mini
 	{
 		width:29.75%;
 	}
 	
-	.loginform input
+	.registerform input
 	{
 		width: 60%;
 		padding: 12px 10px;
 		margin-bottom: 10px;
 	}
+	
+	.registersubmit
+	{
+		color:blue;
+		cursor:pointer;
+	}
+	
+	.registersubmit:hover
+	{
+		color: green;
+		cursor:pointer;
+	}
+	
+	.registersubmit:active
+	{
+		color: yellow;
+	}
+	
+	.loginform
+	{
+		text-align:center;
+		width: 40%;
+		margin: 0 auto;
+	}
+	
+	.loginform input
+	{
+		width: 100%;
+		padding: 12px 10px;
+		margin: 5px 0;
+		border: 1px solid #ccc;
+		display: inline-block;
+		box-sizing: border-box;		
+	}
+	
+	.logincontainer
+	{
+		padding: 16px;
+	}
+	
+	span.rememberme
+	{
+		float:left;
+		padding-top: 14px;
+	}
+	
+	span.forgotpassword
+	{
+		float: right;
+		padding-top: 14px;
+		color:blue
+	}
+	
 
 	h1,h2,h3,h4,h5,h6
 	{
