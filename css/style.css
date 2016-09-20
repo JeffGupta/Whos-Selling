@@ -26,57 +26,24 @@
 	{
 		margin-bottom: 10px;
 	} */
-	
+
+/*styling for green */
+.green {
+  box-shadow: 0 0 8px green;
+}
+
+/*styling for green */
+.red {
+  box-shadow: 0 0 8px red;
+}
 	.easteregg
 	{
 		position: fixed;
 		left: 40px;
 		z-index: -5;
 	}
-	
-	.registerform
-	{
-		display: block;
-		margin: 4px auto;
-		text-align:left;
-	}
-	
-	.radius
-	{
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
-		border-radius: 5px;
-	}
-	
-	.registerform input.mini
-	{
-		width:29.75%;
-	}
-	
-	.registerform input
-	{
-		width: 60%;
-		padding: 12px 10px;
-		margin-bottom: 10px;
-	}
-	
-	.registersubmit
-	{
-		color:blue;
-		cursor:pointer;
-	}
-	
-	.registersubmit:hover
-	{
-		color: green;
-		cursor:pointer;
-	}
-	
-	.registersubmit:active
-	{
-		color: yellow;
-	}
-	
+
+/*styling for login page */
 	.loginform
 	{
 		text-align:center;
@@ -111,7 +78,77 @@
 		padding-top: 14px;
 		color:blue
 	}
+
+/*styling for register page */	
+	.registerform
+	{
+		display: block;
+		margin: 4px auto;
+		text-align:left;
+	}
 	
+	.registerform input.mini
+	{
+		width:29.75%;
+	}
+	
+	.registerform input
+	{
+		width: 60%;
+		padding: 12px 10px;
+		margin-bottom: 10px;
+	}
+	
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 60%;
+	}
+
+	td, th {
+		border: 1px solid #dddddd;
+		text-align: left;
+		padding: 8px;
+	}
+
+	tr:nth-child(even) {
+		background-color: #dddddd;
+	}
+
+/*styling for sell/list page */	
+	.listform
+	{
+		display: block;
+		margin: 4px auto;
+		text-align:center;
+	}
+	
+	.listform input
+	{
+		width: 60%;
+		padding: 12px 10px;
+		margin-bottom: 10px;
+	}
+	
+	textarea
+	{
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		width: 60%;
+		padding: 12px 10px;
+		margin-bottom: 10px;
+	}
+
+/*styling used in multiple pages */
+	.radius
+	{
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+	
+/*below is css provided by template */
 
 	h1,h2,h3,h4,h5,h6
 	{
