@@ -26,7 +26,16 @@
 	{
 		margin-bottom: 10px;
 	} */
-	
+
+/*styling for green */
+.green {
+  box-shadow: 0 0 8px green;
+}
+
+/*styling for green */
+.red {
+  box-shadow: 0 0 8px red;
+}
 	.easteregg
 	{
 		position: fixed;
