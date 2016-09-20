@@ -79,18 +79,24 @@
 									<div class="registerform">
 										<form id="create">
 											<input type="text" name="username" placeholder="Username" class="radius" required><br>
-											<input type="text" name="password" maxlength=10 placeholder="Password (up to 10 characters)" class="radius" required><br>
+											<input type="text" name = "password" type = "password" name="password" maxlength=10 placeholder="Password (up to 10 characters)" class="radius" required><br>
 											<input type="text" name="repassword" maxlength=10 placeholder="Verify Password" class="radius" required><br>
 											<input type="text" name="fname" placeholder="First Name" class="radius mini" required>
 											<input type="text" name="lname" placeholder="Last Name" class="radius mini" required><br>
 											<input type="date" name="dob" placeholder="Date of Birth" class="radius" required><br>
-											
-											<input type="email" name="memail" placeholder="Mason Email" pattern="*.gmu.edu/i" class="radius" required><br>
-											<input type="text" name="major" placeholder="Major" class="radius" required><br>
-												
-											<input type="submit" class="registersubmit" name="registersubmit" id="registersubmit" value="Submit">
-										</form>
-									</div>
+										<!-- Dynamic Display for Mason Ema -->
+										<div>
+										  <input type = "text" name = "memail" placeholder = "Mason Email" id="passwd" id ="submit" class = "radius" required />
+											<id="submit">
+										<div>
+											<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+											<script src="js/index.js"></script>
+										</div>
+										</div>
+										<input type="text" name="major" placeholder="Major" class="radius" required><br>
+										<input type="submit" class="registersubmit" name="registersubmit" id="registersubmit" value="Submit">
+										</form>				
+	
 							</section>
 							
 						<div>						
@@ -113,7 +119,17 @@
 	
 						</table>
 						
-						</div>	
+						</div>
+
+
+  <body>
+
+
+
+    
+    
+    
+  </body>						
 						</div>
 						
 					<!-- /Content -->
@@ -132,7 +148,7 @@
 		position: relative;
 		top:7.5px; 
 		left:7.5px; 
-		
+			<!-- Transform requirement-->
 		transform: scale(1.2,1.1);
 		
 		-webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
@@ -143,8 +159,12 @@
 			-webkit-transform: rotate(360deg);
 			transform: rotate(360deg);
 		}
+
+			<!-- logo is transfored -->
+
 		<!--on hover make copyright symbol shrink-->
 		
+
 		</style>
 				<p class = "transformed"> AF Designs: © (CC0)</p>
 		</div>
