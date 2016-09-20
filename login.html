@@ -17,6 +17,7 @@
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/operations.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -59,13 +60,14 @@
 						<div id="content" class="skel-cell-important">
 							<section class="loginform">
 								<form>
+									<h5 class="incorrectborder" id="loginnotifications"></h5>
 									<div class="logincontainer">
 										<label><b>Username</b></label>
-										<input type="text" class="radius" name="loginusername" required>
+										<input type="text" class="radius" name="loginusername" id="usernamefield" required>
 										
 										<label><b>Password</b></label>
-										<input type="password" class="radius" name="loginpassword" required>
-										<button type="submit" class="registersubmit">Login</button>
+										<input type="password" class="radius" name="loginpassword" id="passwordfield" required>
+										<input type="button" class="registersubmit" id="loginbutton" value="Login">
 									</div>
 										
 									<div class="logincontainer">									
