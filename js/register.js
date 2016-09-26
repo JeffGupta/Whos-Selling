@@ -22,27 +22,45 @@ $(document).ready(function() {
 		var email = document.getElementById("email").value;
 		var major = document.getElementById("major").value;
 		
-		var exists = checkexisting(username,email);
-		addaccount(username,pass,first,last,dob,email,major);
+		accountRef.child(username).once('value')
+			.then(function(snapshot){
+				return (snapshot.val() !== null);
+			})
+			.then(function(exists){
+				if(exists == true)
+				{
+					var registeralert = document.getElementById("registeralert");
+					registeralert.innerHTML = "Username is already in use";
+					registeralert.style.border="solid rgba(255,0,0,0.2)";
+					registeralert.style.backgroundColor="rgba(255,0,0,0.3)";
+					registeralert.style.width="200px";
+				}
+				else
+				{
+					addaccount(username,pass,first,last,dob,email,major);
+				}
+			})
+			.catch(function(error){
+				console.log("error");
+			});
 	});
-		
+	
 	function checkexisting(username, email)
 	{
-		console.log("exists");
-		//var usernameexists;
-		//var emailexists;
-		
-		accountRef.child(username).once('value',function(snapshot)
-		{
-			var usernameexists = (snapshot.val() !== null);
-			if(usernameexists == true) {
-				console.log("true");
-			}
-			if(usernameexists == false) {
-				console.log("false");
-			}
+		/*var usernameexists;
+		accountRef.child(username).once('value').then(function(snapshot) {
+			
+		}, function(error) {
+			console.error(error);
 		});
-		return usernameexists;
+			.then
+		{
+			
+			
+			
+		});
+		console.log("checking: "+usernameexists);
+		return usernameexists; */
 	}
 		
 	function addaccount(username,pass,first,last,dob,email,major)
