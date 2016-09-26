@@ -29,7 +29,7 @@ $(document).ready(function() {
 	function checkexisting(username, email)
 	{
 		console.log("exists");
-		var usernameexists;
+		var usernameexists = false;
 		var emailexists;
 		
 		accountRef.child(username).once('value',function(snapshot)
