@@ -22,6 +22,7 @@ $(document).ready(function() {
 		var email = document.getElementById("email").value;
 		var major = document.getElementById("major").value;
 		
+		var exists = checkexisting(username,email);
 		addaccount(username,pass,first,last,dob,email,major);
 	});
 		
@@ -37,8 +38,7 @@ $(document).ready(function() {
 		if(usernameexists == true) {
 			console.log("true");
 		}
-		
-
+		return usernameexists;
 	}
 		
 	function addaccount(username,pass,first,last,dob,email,major)
