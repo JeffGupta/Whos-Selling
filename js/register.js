@@ -32,7 +32,7 @@ $(document).ready(function() {
 		var usernameexists = true;
 		var emailexists;
 		
-		accountRef.child('/users'+username).once('value',function(snapshot)
+		accountRef.child(+username).once('value',function(snapshot)
 		{
 			usernameexists = (snapshot.val() !== null);
 		});
