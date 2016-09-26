@@ -48,7 +48,7 @@ $(document).ready(function() {
 		
 	function addaccount(username,pass,first,last,dob,email,major)
 	{
-		firebase.database().ref('users/'+username).set({
+		firebase.database().ref('accounts/'+username).set({
 			pass: pass,
 			first_name: first,
 			last_name: last,
