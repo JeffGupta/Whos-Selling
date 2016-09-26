@@ -28,6 +28,7 @@ $(document).ready(function() {
 		
 	function checkexisting(username, email)
 	{
+		console.log("exists");
 		var usernameexists;
 		var emailexists;
 		
