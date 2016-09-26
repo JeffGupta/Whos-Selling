@@ -30,7 +30,7 @@ $(document).ready(function() {
 			registeralert.innerHTML = "Username is already in use";
 			console.log("test");
 		}
-		else
+		else if(exists == false)
 		{
 			addaccount(username,pass,first,last,dob,email,major);
 		}
