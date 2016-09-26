@@ -25,7 +25,7 @@ $('#listsubmit').click(function()
 	
 	//present user's item listing. placeholder for now, will implement verify listing functionality
 	var verifylist = document.getElementById("verifylist");
-	verifylist.innerHTML="<u1><li>Item name: "+itemname+"</li><br /><li>Condition: "+condition+"</li><br /><li>Description: "+description+"</li></ul><br /><input type=\"button\" class=\"registersubmit\" name=\"edititem\" id=\"edititem\" value=\"Edit items\">";
+	verifylist.innerHTML = "<u1><li>Item name: "+itemname+"</li><br /><li>Condition: "+condition+"</li><br /><li>Description: "+description+"</li></ul><br /><input type=\"button\" class=\"registersubmit\" name=\"edititem\" id=\"edititem\" value=\"Edit items\">";
 	
 	//remove the entire listinput div
 	var preview = document.getElementById("preview");

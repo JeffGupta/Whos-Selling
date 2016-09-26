@@ -23,26 +23,26 @@ $(document).ready(function() {
 		var major = document.getElementById("major").value;
 		
 		var exists = checkexisting(username,email);
-		addaccount(username,pass,first,last,dob,email,major);
+		
+		if(exists == true)
+		{
+			var registeralert = document.getElementById("registeralert");
+			registeralert.innerHTML = "Username is already in use";
+		}
+		else
+		{
+			addaccount(username,pass,first,last,dob,email,major);
+		}
 	});
 		
 	function checkexisting(username, email)
-	{
-		console.log("exists");
-		var usernameexists;
-		//var emailexists;
-		
+	{		
 		accountRef.child(username).once('value',function(snapshot)
 		{
-			usernameexists = (snapshot.val() !== null);
-			if(usernameexists == true) {
-				console.log("true");
-			}
-			if(usernameexists == false) {
-				console.log("false");
-			}
+			var usernameexists = (snapshot.val() !== null);
+			
+			return usernameexists;
 		});
-		return usernameexists;
 	}
 		
 	function addaccount(username,pass,first,last,dob,email,major)
