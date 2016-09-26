@@ -33,7 +33,7 @@ $(document).ready(function() {
 					registeralert.innerHTML = "Username is already in use";
 					registeralert.style.border="solid rgba(255,0,0,0.2)";
 					registeralert.style.backgroundColor="rgba(255,0,0,0.3)";
-					registeralert.style.width="150 px";
+					registeralert.style.width="150px";
 				}
 				else
 				{
