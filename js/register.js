@@ -27,7 +27,17 @@ $(document).ready(function() {
 		
 	function checkexisting(username, email)
 	{
-			
+		var usernameexists;
+		var emailexists;
+		
+		var 
+		accountRef.once("value", function(snapshot)
+		{
+			usernameexists = snapshot.child(username).exists();
+		}
+		
+		console.log(usernameexists);
+
 	}
 		
 	function addaccount(username,pass,first,last,dob,email,major)
