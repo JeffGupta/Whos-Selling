@@ -29,12 +29,12 @@ $(document).ready(function() {
 	function checkexisting(username, email)
 	{
 		console.log("exists");
-		//var usernameexists;
+		var usernameexists;
 		//var emailexists;
 		
 		accountRef.child(username).once('value',function(snapshot)
 		{
-			var usernameexists = (snapshot.val() !== null);
+			usernameexists = (snapshot.val() !== null);
 			if(usernameexists == true) {
 				console.log("true");
 			}
