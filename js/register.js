@@ -24,7 +24,7 @@ $(document).ready(function() {
 		
 		accountRef.child(username).once('value')
 			.then(function(snapshot){
-				return var usernameexists = (snapshot.val() !== null);
+				return (snapshot.val() !== null);
 			})
 			.then(function(exists){
 				if(exists == true)
