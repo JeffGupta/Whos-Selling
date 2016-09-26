@@ -35,7 +35,7 @@ $(document).ready(function() {
 			usernameexists = snapshot.child(username).exists();
 		});
 		
-		console.log(usernameexists);
+		console.log(true);
 
 	}
 		
