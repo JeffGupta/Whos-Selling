@@ -31,6 +31,8 @@ $(document).ready(function() {
 				{
 					var registeralert = document.getElementById("registeralert");
 					registeralert.innerHTML = "Username is already in use";
+					registeralert.style.border="solid rgba(255,0,0,0.2)";
+					registeralert.style.backgroundColor="rgba(255,0,0,0.3)";
 					console.log("test");
 				}
 				else
