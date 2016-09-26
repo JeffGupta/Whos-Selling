@@ -45,7 +45,7 @@ $(document).ready(function() {
 	
 	function checkexisting(username, email)
 	{
-		var usernameexists;
+		/*var usernameexists;
 		accountRef.child(username).once('value').then(function(snapshot) {
 			
 		}, function(error) {
@@ -58,7 +58,7 @@ $(document).ready(function() {
 			
 		});
 		console.log("checking: "+usernameexists);
-		return usernameexists;
+		return usernameexists; */
 	}
 		
 	function addaccount(username,pass,first,last,dob,email,major)
