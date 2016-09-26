@@ -28,6 +28,7 @@ $(document).ready(function() {
 		{
 			var registeralert = document.getElementById("registeralert");
 			registeralert.innerHTML = "Username is already in use";
+			console.log("test");
 		}
 		else
 		{
