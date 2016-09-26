@@ -29,20 +29,19 @@ $(document).ready(function() {
 	function checkexisting(username, email)
 	{
 		console.log("exists");
-		var usernameexists = true;
-		var emailexists;
+		//var usernameexists;
+		//var emailexists;
 		
 		accountRef.child(username).once('value',function(snapshot)
 		{
-			usernameexists = (snapshot.val() !== null);
+			var usernameexists = (snapshot.val() !== null);
+			if(usernameexists == true) {
+				console.log("true");
+			}
+			if(usernameexists == false) {
+				console.log("false");
+			}
 		});
-		
-		if(usernameexists == true) {
-			console.log("true");
-		}
-		if(usernameexists == false) {
-			console.log("false");
-		}
 		return usernameexists;
 	}
 		
