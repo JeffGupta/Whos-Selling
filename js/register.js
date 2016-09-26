@@ -14,13 +14,13 @@ $(document).ready(function() {
 	
 	$('#registersubmit').click(function()
 	{
-		var username = document.getElementById("username");
-		var pass = document.getElementById("password");
-		var first = document.getElementById("first");
-		var last = document.getElementById("last");
-		var dob = document.getElementById("dob");
-		var email = document.getElementById("email");
-		var major = document.getElementById("major");
+		var username = document.getElementById("username").value;
+		var pass = document.getElementById("password").value;
+		var first = document.getElementById("first").value;
+		var last = document.getElementById("last").value;
+		var dob = document.getElementById("dob").value;
+		var email = document.getElementById("email").value;
+		var major = document.getElementById("major").value;
 		
 		addaccount(username,pass,first,last,dob,email,major);
 	});
