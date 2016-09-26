@@ -30,7 +30,6 @@ $(document).ready(function() {
 		var usernameexists;
 		var emailexists;
 		
-		var 
 		accountRef.once('value', function(snapshot)
 		{
 			usernameexists = snapshot.child(username).exists();
