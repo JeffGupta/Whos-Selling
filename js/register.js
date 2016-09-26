@@ -41,7 +41,7 @@ $(document).ready(function() {
 		accountRef.child(username).once('value',function(snapshot)
 		{
 			var usernameexists = (snapshot.val() !== null);
-			
+			console.log("checking: "+usernameexists);
 			return usernameexists;
 		});
 	}
