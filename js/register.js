@@ -32,13 +32,13 @@ $(document).ready(function() {
 		
 	function addaccount(username,pass,first,last,dob,email,major)
 	{
-		firebase.database().ref('users/'+username).set([
+		firebase.database().ref('users/'+username).set({
 			pass: pass,
 			first_name: first,
 			last_name: last,
 			date_of_birth: dob,
 			email: email,
 			major: major
-		]);
+		});
 	}
 });
