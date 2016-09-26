@@ -22,26 +22,46 @@ $(document).ready(function() {
 		var email = document.getElementById("email").value;
 		var major = document.getElementById("major").value;
 		
-		var exists = checkexisting(username,email);
-		console.log("out: "+exists);
-		if(exists == true)
-		{
-			var registeralert = document.getElementById("registeralert");
-			registeralert.innerHTML = "Username is already in use";
-			console.log("test");
-		}
-		else
-		{
-			addaccount(username,pass,first,last,dob,email,major);
-		}
+		accountRef.child(username).once('value')
+			.then(function(snapshot){
+				return usernameexists = (snapshot.val() !== null);
+			})
+			.then(function(exists){
+				if(exists == true)
+				{
+					var registeralert = document.getElementById("registeralert");
+					registeralert.innerHTML = "Username is already in use";
+					console.log("test");
+				}
+				else
+				{
+					addaccount(username,pass,first,last,dob,email,major);
+				}
+			})
+			.catch(function(error){
+				console.log("error");
+			});
 	});
-		
+	
+	function checkusername(username)
+	{
+		return new Promise(function(resolve, reject)
+		{
+			
+		}
+	}
+	
 	function checkexisting(username, email)
 	{
 		var usernameexists;
-		accountRef.child(username).once('value',function(snapshot)
+		accountRef.child(username).once('value').then(function(snapshot) {
+			
+		}, function(error) {
+			console.error(error);
+		});
+			.then
 		{
-			usernameexists = (snapshot.val() !== null);
+			
 			
 			
 		});
