@@ -39,6 +39,9 @@ $(document).ready(function() {
 		if(usernameexists == true) {
 			console.log("true");
 		}
+		if(usernameexists == false) {
+			console.log("false");
+		}
 		return usernameexists;
 	}
 		
