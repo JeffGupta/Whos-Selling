@@ -43,14 +43,6 @@ $(document).ready(function() {
 			});
 	});
 	
-	function checkusername(username)
-	{
-		return new Promise(function(resolve, reject)
-		{
-			
-		}
-	}
-	
 	function checkexisting(username, email)
 	{
 		var usernameexists;
