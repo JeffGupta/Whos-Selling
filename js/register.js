@@ -23,7 +23,7 @@ $(document).ready(function() {
 		var major = document.getElementById("major");
 		
 		addaccount(username,pass,first,last,dob,email,major);
-	}
+	});
 		
 	function checkexisting(username, email)
 	{
