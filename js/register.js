@@ -37,13 +37,15 @@ $(document).ready(function() {
 	});
 		
 	function checkexisting(username, email)
-	{		
+	{
+		var usernameexists;
 		accountRef.child(username).once('value',function(snapshot)
 		{
-			var usernameexists = (snapshot.val() !== null);
+			usernameexists = (snapshot.val() !== null);
 			console.log("checking: "+usernameexists);
-			return usernameexists;
+			
 		});
+		return usernameexists;
 	}
 		
 	function addaccount(username,pass,first,last,dob,email,major)
