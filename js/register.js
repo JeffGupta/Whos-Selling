@@ -23,7 +23,7 @@ $(document).ready(function() {
 		var major = document.getElementById("major").value;
 		
 		var exists = checkexisting(username,email);
-		
+		console.log("out: "+exists);
 		if(exists == true)
 		{
 			var registeralert = document.getElementById("registeralert");
