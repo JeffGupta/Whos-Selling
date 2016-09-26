@@ -33,7 +33,7 @@ $(document).ready(function() {
 		accountRef.once('value', function(snapshot)
 		{
 			usernameexists = snapshot.child(username).exists();
-		}
+		});
 		
 		console.log(usernameexists);
 
