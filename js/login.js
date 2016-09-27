@@ -20,8 +20,8 @@ $(document).ready(function()
 		today = new Date();
 		expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
 		
-		var username = document.getElementById("username").value;
-		var pass = document.getElementById("password").value;
+		var username = document.getElementById("usernamefield").value;
+		var pass = document.getElementById("passwordfield").value;
 		
 		trylogin(username,pass);
 	});
@@ -38,7 +38,7 @@ $(document).ready(function()
 			.then(function(exists){
 				if(exists == false)
 				{
-					if(accountsnapshot.pass == pass) {
+					if(accountsnapshot.pass !== pass) {
 						var loginalert = document.getElementById("loginalert");
 						loginalert.innerHTML = "Username or password is incorrect";
 						loginalert.style.border="solid rgba(255,0,0,0.2)";
