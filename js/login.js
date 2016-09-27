@@ -36,7 +36,7 @@ $(document).ready(function()
 				return (snapshot.val() !== null);
 			})
 			.then(function(exists){
-				if(exists == true)
+				if(exists == false)
 				{
 					if(accountsnapshot.pass !== pass) {
 						var loginalert = document.getElementById("loginalert");
