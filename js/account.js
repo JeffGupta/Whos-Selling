@@ -30,7 +30,7 @@ $(document).ready(function()
 				var emaillabel = document.getElementById("emaillabel");
 				var majorlabel = document.getElementById("majorlabel");
 				
-				userlabel.innerHTML = "Username: "+snapshot.username;
+				userlabel.innerHTML = "Username: "+username;
 				fnamelabel.innerHTML = "First name: "+snapshot.first_name;
 				lnamelabel.innerHTML = "Last name: "+snapshot.last_name;
 				doblabel.innerHTML = "Date of birth: "+snapshot.date_of_birth;

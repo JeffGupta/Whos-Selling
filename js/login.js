@@ -18,7 +18,7 @@ $(document).ready(function()
 	$('#loginbutton').click(function()
 	{
 		today = new Date();
-		expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
+		expiry = new Date(today.getTime() + 30 * 60 * 1000); // plus 30 days
 		
 		var username = document.getElementById("usernamefield").value;
 		var pass = document.getElementById("passwordfield").value;
