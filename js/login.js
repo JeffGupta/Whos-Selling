@@ -38,7 +38,7 @@ $(document).ready(function()
 			.then(function(exists){
 				if(exists == false)
 				{
-					if(accountsnapshot.pass !== pass) {
+					if(accountsnapshot.pass == pass) {
 						var loginalert = document.getElementById("loginalert");
 						loginalert.innerHTML = "Username or password is incorrect";
 						loginalert.style.border="solid rgba(255,0,0,0.2)";
