@@ -17,6 +17,7 @@ $(document).ready(function()
 	
 	function putaccount()
 	{
+		console.log(document.cookie);
 		var username = getCookie("username");
 		accountRef.child(username).once('value')
 			.then(function(snapshot){
