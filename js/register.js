@@ -8,7 +8,7 @@ $(document).ready(function() {
 		storageBucket: "",
 		messagingSenderId: "512922207100"
 	};
-	firebase.initializeApp(config);
+	//firebase.initializeApp(config);
 	
 	var accountRef = firebase.database().ref('accounts');
 	
