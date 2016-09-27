@@ -17,6 +17,7 @@ $(document).ready(function()
 	
 	$('#loginbutton').click(function()
 	{
+		//used for cookies
 		today = new Date();
 		expiry = new Date(today.getTime() + 30 * 60 * 1000); // plus 30 days
 		
@@ -30,12 +31,14 @@ $(document).ready(function()
 	{
 		var accountsnapshot;
 		
+		//promise to try to grab snapshot of object with username key
 		accountRef.child(username).once('value')
 			.then(function(snapshot){
 				accountsnapshot = snapshot.val();
 				return (snapshot.val() !== null);
 			})
 			.then(function(exists){
+				//if user exists, check password is correct
 				if(exists == true)
 				{
 					if(accountsnapshot.pass == pass) {
@@ -66,11 +69,6 @@ $(document).ready(function()
 	
 	function setCookie(name, value)
 	{
-		delete_cookie(name);
-		delete_cookie(name);
-		delete_cookie(name);
-		delete_cookie(name);
-		delete_cookie(name);
 		document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
 	}
 	

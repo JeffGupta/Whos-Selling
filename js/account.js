@@ -15,8 +15,10 @@ $(document).ready(function()
 	
 	putaccount();
 	
+	//once page loads, display account information
 	function putaccount()
 	{
+		//promise to get snapshot with username key
 		var username = getCookie("username");
 		accountRef.child(username).once('value')
 			.then(function(snapshot){
@@ -30,6 +32,7 @@ $(document).ready(function()
 				var emaillabel = document.getElementById("emaillabel");
 				var majorlabel = document.getElementById("majorlabel");
 				
+				//display account info
 				userlabel.innerHTML = "Username: "+username;
 				fnamelabel.innerHTML = "First name: "+snapshot.first_name;
 				lnamelabel.innerHTML = "Last name: "+snapshot.last_name;

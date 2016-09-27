@@ -17,17 +17,21 @@ $(document).ready(function() {
 		var username = document.getElementById("username").value;
 		var email = document.getElementById("email").value;
 		
+		//try to register account
 		addattempt(username,email);
 	});
 	
 	function addattempt(username, email)
 	{
 		var errormsg;
+		
+		//promise to get child with key that matches username
 		accountRef.child(username).once('value')
 			.then(function(snapshot){
 				return (snapshot.val() !== null);
 			})
 			.then(function(exists){
+				//if the username isn't taken, check email
 				if(exists !== true)
 				{
 					var email = document.getElementById("email").value;
@@ -35,6 +39,7 @@ $(document).ready(function() {
 					var validemail = regex.test($(this).val());
 						
 					if(validemail == true) {
+						//retrieve data fields
 						var username = document.getElementById("username").value;
 						var pass = document.getElementById("password").value;
 						var first = document.getElementById("first").value;
@@ -42,6 +47,7 @@ $(document).ready(function() {
 						var dob = document.getElementById("dob").value;
 						var major = document.getElementById("major").value;
 						
+						//now add account since it passed error checking
 						addaccount(username,pass,first,last,dob,email,major);
 						return;
 					}
@@ -59,6 +65,7 @@ $(document).ready(function() {
 		
 	function addaccount(username,pass,first,last,dob,email,major)
 	{
+		//create new user in firebase
 		firebase.database().ref('accounts/'+username).set({
 			pass: pass,
 			first_name: first,
