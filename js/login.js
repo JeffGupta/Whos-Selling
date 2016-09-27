@@ -66,6 +66,10 @@ $(document).ready(function()
 	function setCookie(name, value)
 	{
 		delete_cookie(name);
+		delete_cookie(name);
+		delete_cookie(name);
+		delete_cookie(name);
+		delete_cookie(name);
 		document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
 	}
 	
