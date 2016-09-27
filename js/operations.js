@@ -1,5 +1,5 @@
 $(document).ready(function() {
-$('#loginbutton').click(function()
+/* $('#loginbutton').click(function()
 {
 	//placeholder: check if username and password are what are desired. will change once database is implemeented
 	if((document.getElementById("usernamefield").value!="Username")||(document.getElementById("passwordfield").value!="Password")) {
@@ -9,7 +9,7 @@ $('#loginbutton').click(function()
 		notifications.style.backgroundColor="rgba(255,0,0,0.3)";
 	}
 	
-});
+}); */
 
 //place holder to allow user to edit items before listing them
 $('#anotheritem').click(function()
@@ -30,12 +30,6 @@ $('#listsubmit').click(function()
 	//remove the entire listinput div
 	var preview = document.getElementById("preview");
 	preview.parentNode.removeChild(preview);
-});
-
-//show hash whenever current windows hash changes
-$(window).on('hashchange', function () {
-  show(location.hash);
-  console.log(location.hash);
 });
 
 });
