@@ -13,7 +13,6 @@ $(document).ready(function()
 	
 	var accountRef = firebase.database().ref('accounts');
 	
-	setCookie("username","b");
 	putaccount();
 	
 	function putaccount()
