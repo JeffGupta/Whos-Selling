@@ -36,20 +36,20 @@ $(document).ready(function()
 				return (snapshot.val() !== null);
 			})
 			.then(function(exists){
-				if(exists == false)
+				if(exists == true)
 				{
 					if(accountsnapshot.pass !== pass) {
-						var loginalert = document.getElementById("loginalert");
-						loginalert.innerHTML = "Username or password is incorrect";
-						loginalert.style.border="solid rgba(255,0,0,0.2)";
-						loginalert.style.backgroundColor="rgba(255,0,0,0.3)";
-						loginalert.style.width="240px";
+						storeusername(username);
+						document.location.href = 'https://jeffgupta.github.io/Whos-Selling/account.html';
 					}
 				}
 				else
 				{
-					storeusername(username);
-					document.location.href = 'https://jeffgupta.github.io/Whos-Selling/account.html';
+					var loginalert = document.getElementById("loginalert");
+					loginalert.innerHTML = "Username or password is incorrect";
+					loginalert.style.border="solid rgba(255,0,0,0.2)";
+					loginalert.style.backgroundColor="rgba(255,0,0,0.3)";
+					loginalert.style.width="240px";
 				}
 			})
 			.catch(function(error){

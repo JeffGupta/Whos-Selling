@@ -18,7 +18,6 @@ $(document).ready(function()
 	function putaccount()
 	{
 		var username = getCookie("username");
-		console.log(username);
 		accountRef.child(username).once('value')
 			.then(function(snapshot){
 				return snapshot.val();
