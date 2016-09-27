@@ -65,7 +65,12 @@ $(document).ready(function()
 	
 	function setCookie(name, value)
 	{
-		document.cookie = "";
+		delete_cookie(name);
 		document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+	}
+	
+	function delete_cookie(name)
+	{
+	  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 	}
 });
