@@ -1,0 +1,37 @@
+<!DOCTYPE html "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+  <head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Get a book's information with its ISBN</title>
+	</head>
+	<body>
+	<label>Type in an ISBN and click the pop-up button to get the book information</label><br/>
+	
+	
+    <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+    <script type="text/javascript">
+	
+    google.books.load();
+	
+	var isbn = '0738531367'; 
+	var isbn2 = prompt("Please enter ISBN 10 digits");
+      function initialize() {
+        var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
+        viewer.load('ISBN:' + isbn2);
+      }
+
+      google.books.setOnLoadCallback(initialize);
+    </script>
+	
+	
+  </head>
+  <body>
+    <div id="viewerCanvas" style="width: 1000px; height: 800px"></div>
+  </body>
+</html>
