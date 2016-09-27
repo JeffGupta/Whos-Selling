@@ -65,6 +65,7 @@ $(document).ready(function()
 	
 	function setCookie(name, value)
 	{
+		document.cookie = "";
 		document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
 	}
 });
