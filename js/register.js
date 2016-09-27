@@ -29,24 +29,27 @@ $(document).ready(function() {
 			.then(function(exists){
 				if(exists == true)
 				{
-					var registeralert = document.getElementById("registeralert");
-					registeralert.innerHTML = "Username is already in use";
-					registeralert.style.border="solid rgba(255,0,0,0.2)";
-					registeralert.style.backgroundColor="rgba(255,0,0,0.3)";
-					registeralert.style.width="200px";
-				}
-				else
-				{
-					var username = document.getElementById("username").value;
-					var pass = document.getElementById("password").value;
-					var first = document.getElementById("first").value;
-					var last = document.getElementById("last").value;
-					var dob = document.getElementById("dob").value;
 					var email = document.getElementById("email").value;
-					var major = document.getElementById("major").value;
-					
-					addaccount(username,pass,first,last,dob,email,major);
+					var regex = /.*.gmu.edu$/igm;
+					var validemail = regex.test($(this).val());
+						
+					if(validemail == true) {
+						var username = document.getElementById("username").value;
+						var pass = document.getElementById("password").value;
+						var first = document.getElementById("first").value;
+						var last = document.getElementById("last").value;
+						var dob = document.getElementById("dob").value;
+						var major = document.getElementById("major").value;
+						
+						addaccount(username,pass,first,last,dob,email,major);
+						return;
+					}
 				}
+				var registeralert = document.getElementById("registeralert");
+				registeralert.innerHTML = "Username is already in use";
+				registeralert.style.border="solid rgba(255,0,0,0.2)";
+				registeralert.style.backgroundColor="rgba(255,0,0,0.3)";
+				registeralert.style.width="200px";
 			})
 			.catch(function(error){
 				console.log("error");
