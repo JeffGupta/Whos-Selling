@@ -54,12 +54,7 @@ $(document).ready(function()
 				}
 			})
 			.catch(function(error){
-				//if username doesn't exist, alert user without letting them know which is wrong
-				var loginalert = document.getElementById("loginalert");
-				loginalert.innerHTML = "Username or password is incorrect";
-				loginalert.style.border="solid rgba(255,0,0,0.2)";
-				loginalert.style.backgroundColor="rgba(255,0,0,0.3)";
-				loginalert.style.width="240px";
+				console.log(error);
 			});
 	}
 	
