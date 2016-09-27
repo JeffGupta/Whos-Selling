@@ -22,12 +22,13 @@ $(document).ready(function() {
 	
 	function addattempt(username, email)
 	{
+		var errormsg;
 		accountRef.child(username).once('value')
 			.then(function(snapshot){
 				return (snapshot.val() !== null);
 			})
 			.then(function(exists){
-				if(exists == true)
+				if(exists !== true)
 				{
 					var email = document.getElementById("email").value;
 					var regex = /.*.gmu.edu$/igm;
