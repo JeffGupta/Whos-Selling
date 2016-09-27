@@ -15,13 +15,13 @@ $(document).ready(function() {
 	$('#registersubmit').click(function()
 	{
 		var username = document.getElementById("username").value;
-		var pass = document.getElementById("password").value;
-		var first = document.getElementById("first").value;
-		var last = document.getElementById("last").value;
-		var dob = document.getElementById("dob").value;
 		var email = document.getElementById("email").value;
-		var major = document.getElementById("major").value;
 		
+		addattempt(username,email);
+	});
+	
+	function addattempt(username, email)
+	{
 		accountRef.child(username).once('value')
 			.then(function(snapshot){
 				return (snapshot.val() !== null);
@@ -37,30 +37,20 @@ $(document).ready(function() {
 				}
 				else
 				{
+					var username = document.getElementById("username").value;
+					var pass = document.getElementById("password").value;
+					var first = document.getElementById("first").value;
+					var last = document.getElementById("last").value;
+					var dob = document.getElementById("dob").value;
+					var email = document.getElementById("email").value;
+					var major = document.getElementById("major").value;
+					
 					addaccount(username,pass,first,last,dob,email,major);
 				}
 			})
 			.catch(function(error){
 				console.log("error");
 			});
-	});
-	
-	function checkexisting(username, email)
-	{
-		/*var usernameexists;
-		accountRef.child(username).once('value').then(function(snapshot) {
-			
-		}, function(error) {
-			console.error(error);
-		});
-			.then
-		{
-			
-			
-			
-		});
-		console.log("checking: "+usernameexists);
-		return usernameexists; */
 	}
 		
 	function addaccount(username,pass,first,last,dob,email,major)

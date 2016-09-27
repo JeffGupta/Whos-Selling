@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Who's Selling Login</title>
+		<title>Who's Selling - Account Information</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -17,9 +17,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="js/operations.js"></script>
-		<script src="js/login.js"></script>
+		<script src="js/account.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -27,12 +25,12 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	</head>
-	<body>
+	<body onload="putaccount()">
 
 	<!-- Header -->
 		<div id="header">
 			<div class="container">
-					<img src="images/pokeball.png" class="easteregg" height="42" width="42">
+					
 				<!-- Logo -->
 					<div id="logo">
 						<h1><a href="#">Who's Selling</a></h1>
@@ -42,7 +40,7 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="index.html">Homepage</a></li>
-							<li class="active"><a href="login.html">Login</a></li>
+							<li><a href="login.html">Login</a></li>
 							<li><a href="register.html#main">Register</a></li>
 							<li><a href="listinput.html">Sell</a></li>
 						</ul>
@@ -54,39 +52,42 @@
 			
 	<!-- Main -->
 		<div id="main">
-			<div>
-				<div>
+			<div class="container">
+				<div class="row">
 				
-					<!-- Content -->
-						<div id="content" class="skel-cell-important">
-							<section class="loginform">
-								<form>
-									
-									<!--used as a placeholder for incorrect login notification-->
-									<h5 class="incorrectborder" id="loginnotifications"></h5>
-									
-									<div class="logincontainer">
-										
-										<label><b>Username</b></label>
-										<input type="text" class="radius" name="loginusername" id="usernamefield" required>
-											
-										<label><b>Password</b></label>
-										<input type="password" class="radius" name="loginpassword" id="passwordfield" required>
-										<input type="button" class="registersubmit" id="loginbutton" value="Login">
-										
-									</div>
-										
-									<div class="logincontainer">									
-										<span class="forgotpassword"><a href="placeholder">Forgot password?</a></span>
-									</div>
-									
-									<!--<div class="logincontainer" style-->
+					<!-- Sidebar -->
+						<div id="sidebar" class="4u">
+							<section>
+								<header>
+									<h2 align="center">FAQ</h2>
+								</header>
+								<p><b>Placeholder for account options</b><br>
 							</section>
 						</div>
+					<!-- Sidebar -->
+				
+					<!-- Content -->
+						<div id="content" class="8u skel-cell-important">
+							<section>
+									<div class="registerform">
+										<header>
+											<h2>Account Information</h2>
+										</header>
+										<h5 id="loginalert"></h5>
+										<div>
+											<ul>
+												<li id="userlabel"></li>
+												<li id="fnamelabel"></li>
+												<li id="lnamelabel"></li>
+												<li id="doblabel"></li>
+												<li id="emaillabel"></li>
+												<li id="majorlabel"></li>
+											</ul>
+										</div>
+							</section>				
+						</div>
 					<!-- /Content -->
-
 				</div>
-			
 			</div>
 		</div>
 	<!-- Main -->
@@ -99,31 +100,26 @@
 		position: relative;
 		top:7.5px; 
 		left:7.5px; 
-		
+			<!-- Transform requirement-->
 		transform: scale(1.2,1.1);
 		
 		-webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
 		transition: width 2s, height 2s, background-color 2s, transform 2s;
 		}
+		
 		.transformed:hover {
 			-webkit-transform: rotate(360deg);
 			transform: rotate(360deg);
 		}
+
+			<!-- logo is transfored -->
+
+		<!--on hover make copyright symbol shrink-->
+		
+
 		</style>
 				<p class = "transformed"> AF Designs: © (CC0)</p>
 		</div>
 
 	</body>
-	<script>
-		// Initialize Firebase
-		"use strict";
-		var config = {
-			apiKey: "AIzaSyCowZvhT-bUUoBd0xZv1OTW9Q1tNxZxRGk",
-			authDomain: "whos-selling.firebaseapp.com",
-			databaseURL: "https://whos-selling.firebaseio.com",
-			storageBucket: "",
-			messagingSenderId: "512922207100"
-		};
-		firebase.initializeApp(config);		
-	</script>
 </html>
