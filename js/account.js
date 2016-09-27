@@ -31,11 +31,11 @@ $(document).ready(function()
 				var majorlabel = document.getElementById("majorlabel");
 				
 				userlabel.innerHTML = "Username: "+snapshot.username;
-				fnamelabel.innerHTML = "Username: "+snapshot.fname;
-				lnamelabel.innerHTML = "Username: "+snapshot.lname;
-				doblabel.innerHTML = "Username: "+snapshot.dob;
-				emaillabel.innerHTML = "Username: "+snapshot.email;
-				majorlabel.innerHTML = "Username: "+snapshot.major;
+				fnamelabel.innerHTML = "First name: "+snapshot.first_name;
+				lnamelabel.innerHTML = "Last name: "+snapshot.last_name;
+				doblabel.innerHTML = "Date of birth: "+snapshot.date_of_birth;
+				emaillabel.innerHTML = "email: "+snapshot.email;
+				majorlabel.innerHTML = "major: "+snapshot.major;
 			})
 			.catch(function(error){
 				console.log("error");
