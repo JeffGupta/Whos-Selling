@@ -15,7 +15,7 @@ $(document).ready(function()
 	var today;
 	var expiry;
 	
-	$('#registersubmit').click(function()
+	$('#loginsubmit').click(function()
 	{
 		today = new Date();
 		expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
