@@ -49,6 +49,7 @@ $(document).ready(function()
 				else
 				{
 					storeusername(username);
+					document.location.href = https://jeffgupta.github.io/Whos-Selling/account.html
 				}
 			})
 			.catch(function(error){
