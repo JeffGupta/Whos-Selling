@@ -38,13 +38,14 @@ $(document).ready(function()
 			.then(function(exists){
 				if(exists == true)
 				{
-					if(accountsnapshot.pass !== pass) {
+					if(accountsnapshot.pass == pass) {
 						storeusername(username);
 						document.location.href = 'https://jeffgupta.github.io/Whos-Selling/account.html';
 					}
 				}
 				else
 				{
+					//if password is not correct alert user without telling them which one
 					var loginalert = document.getElementById("loginalert");
 					loginalert.innerHTML = "Username or password is incorrect";
 					loginalert.style.border="solid rgba(255,0,0,0.2)";
@@ -53,7 +54,12 @@ $(document).ready(function()
 				}
 			})
 			.catch(function(error){
-				console.log("error");
+				//if username doesn't exist, alert user without letting them know which is wrong
+				var loginalert = document.getElementById("loginalert");
+				loginalert.innerHTML = "Username or password is incorrect";
+				loginalert.style.border="solid rgba(255,0,0,0.2)";
+				loginalert.style.backgroundColor="rgba(255,0,0,0.3)";
+				loginalert.style.width="240px";
 			});
 	}
 	
