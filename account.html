@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Who's Selling - Sell</title>
+		<title>Who's Selling - Account Information</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -17,7 +17,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
-		<script src="js/operations.js"></script>
+		<script src="js/account.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -42,7 +42,7 @@
 							<li><a href="index.html">Homepage</a></li>
 							<li><a href="login.html">Login</a></li>
 							<li><a href="register.html#main">Register</a></li>
-							<li class="active"><a href="listinput.html">Sell</a></li>
+							<li><a href="listinput.html">Sell</a></li>
 						</ul>
 					</nav>
 
@@ -54,45 +54,54 @@
 		<div id="main">
 			<div class="container">
 				<div class="row">
-
+				
+					<!-- Sidebar -->
+						<div id="sidebar" class="4u">
+							<section>
+								<header>
+									<h2 align="center">FAQ</h2>
+								</header>
+								<p align="center"><b>Placeholder for account options</b><br>
+							</section>
+						</div>
+					<!-- Sidebar -->
+				
 					<!-- Content -->
 						<div id="content" class="8u skel-cell-important">
 							<section>
-								<div class="listform">
-									<header>
-										<h2>List an Item</h2>
-									</header>
-									<div id="preview" data-itemnum=0>
-										<form id="listcreate">
-											<input type="text" name="itemname" placeholder="Item name" id="itemname" class="radius" required><br>
-											<input type="text" name="listcondition" placeholder="Condition" id="condition" class="radius" required><br>
-											<textarea placeholder="Enter a description of the item" id="description" style="height:200px" required></textarea><br>
-											<input type="button" class="registersubmit" name="anotheritem" id="anotheritem" value="List another item">
-											<input type="button" class="registersubmit" name="listsubmit" id="listsubmit" value="List">
-										</form>	
-									</div>
-								</div>
-								
-								<div class="listform" id="verifylist"></div>
-							</section>
+									<div class="registerform">
+										<header>
+											<h2>Account Information</h2>
+										</header>
+										<h5 id="loginalert"></h5>
+										<div>
+											<ul>
+											<!-- javascript will fill in account info based on cookies -->
+												<li id="userlabel"></li>
+												<li id="fnamelabel"></li>
+												<li id="lnamelabel"></li>
+												<li id="doblabel"></li>
+												<li id="emaillabel"></li>
+												<li id="majorlabel"></li>
+											</ul>
+										</div>
+							</section>				
 						</div>
 					<!-- /Content -->
-						
 				</div>
-			
 			</div>
 		</div>
 	<!-- Main -->
 
 	<!-- Copyright -->
-	<div id="copyright">
+		<div id="copyright">
 		
 		<style>
 		.transformed{
 		position: relative;
 		top:7.5px; 
 		left:7.5px; 
-		
+			<!-- Transform requirement-->
 		transform: scale(1.2,1.1);
 		
 		-webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
@@ -103,23 +112,14 @@
 			-webkit-transform: rotate(360deg);
 			transform: rotate(360deg);
 		}
+
+			<!-- logo is transfored -->
+
 		<!--on hover make copyright symbol shrink-->
 		
+
 		</style>
 				<p class = "transformed"> AF Designs: © (CC0)</p>
 		</div>
-
 	</body>
-	<script>
-		// Initialize Firebase
-		"use strict";
-		var config = {
-			apiKey: "AIzaSyCowZvhT-bUUoBd0xZv1OTW9Q1tNxZxRGk",
-			authDomain: "whos-selling.firebaseapp.com",
-			databaseURL: "https://whos-selling.firebaseio.com",
-			storageBucket: "",
-			messagingSenderId: "512922207100"
-		};
-		firebase.initializeApp(config);		
-	</script>
 </html>

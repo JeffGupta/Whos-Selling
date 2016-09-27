@@ -11,6 +11,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+		<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>
@@ -18,6 +19,7 @@
 		<script src="js/init.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="js/operations.js"></script>
+		<script src="js/login.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -43,6 +45,7 @@
 							<li class="active"><a href="login.html">Login</a></li>
 							<li><a href="register.html#main">Register</a></li>
 							<li><a href="listinput.html">Sell</a></li>
+							<li><a href="google_search.html">Search</a></li>
 						</ul>
 					</nav>
 
@@ -61,15 +64,17 @@
 								<form>
 									
 									<!--used as a placeholder for incorrect login notification-->
-									<h5 class="incorrectborder" id="loginnotifications"></h5>
+									<h5 class="incorrectborder" align="center" id="loginalert"></h5>
 									
 									<div class="logincontainer">
+										
 										<label><b>Username</b></label>
 										<input type="text" class="radius" name="loginusername" id="usernamefield" required>
-										
+											
 										<label><b>Password</b></label>
 										<input type="password" class="radius" name="loginpassword" id="passwordfield" required>
 										<input type="button" class="registersubmit" id="loginbutton" value="Login">
+										
 									</div>
 										
 									<div class="logincontainer">									
@@ -110,4 +115,16 @@
 		</div>
 
 	</body>
+	<script>
+		// Initialize Firebase
+		"use strict";
+		var config = {
+			apiKey: "AIzaSyCowZvhT-bUUoBd0xZv1OTW9Q1tNxZxRGk",
+			authDomain: "whos-selling.firebaseapp.com",
+			databaseURL: "https://whos-selling.firebaseio.com",
+			storageBucket: "",
+			messagingSenderId: "512922207100"
+		};
+		firebase.initializeApp(config);		
+	</script>
 </html>
