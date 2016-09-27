@@ -18,10 +18,7 @@ $(document).ready(function()
 	
 	function putaccount()
 	{
-		document.cookie = 'username=b';
-		console.log(document.cookie);
 		var username = getCookie("username");
-		console.log(username);
 		accountRef.child(username).once('value')
 			.then(function(snapshot){
 				return snapshot.val();
@@ -51,12 +48,5 @@ $(document).ready(function()
 		var re = new RegExp(name + "=([^;]+)");
 		var value = re.exec(document.cookie);
 		return (value != null) ? unescape(value[1]) : null;
-	}
-	
-	function setCookie(name, value)
-	{
-		var today = new Date();
-		var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
-		document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
 	}
 });
