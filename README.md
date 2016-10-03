@@ -23,7 +23,7 @@ The user can log in using his/her new credentials that have been added to the fi
 After Login 
 After logging in successfully, a user can choose to buy or to sell. After which the user will be redirected to the respective page he/she selects. 
 
-Make a Listing
+Make a Listing - IMPLEMENTED for HW4
 If the user wants to sell , he or she can make a listing after logging into the site. Furthermore, the user has to option to review their listing before making it public. React will be used as we implement this feature. 
 
 
