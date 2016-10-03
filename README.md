@@ -23,7 +23,10 @@ The user can log in using his/her new credentials that have been added to the fi
 After Login 
 After logging in successfully, a user can choose to buy or to sell. After which the user will be redirected to the respective page he/she selects. 
 
+Make a Listing
+If the user wants to sell , he or she can make a listing after logging into the site. Furthermore, the user has to option to review their listing before making it public. React will be used as we implement this feature. 
 
-Search - IMPLEMENTED (Work in progres)
+
+Search - IMPLEMENTED for HW4 
 From the title, a user can search for the book he/she is interested in by typing in a book’s corresponding ISBN. At the moment not all ISBN will work because we are using the google books api. Later we will add more api's like amazon's to increase the number of books. It will prompt the user to enter their books ISBN and will return a preview of the book as well as where you can purchase the book from. We will add more features to this later, in particular comparining local prices on campus to that of online. 
  
