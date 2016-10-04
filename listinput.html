@@ -19,6 +19,8 @@
 		<script src="js/init.js"></script>
 		<script src="js/operations.js"></script>
 		<script src="js/listinput.js"></script>
+		<script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react.js"></script>
+		<script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react-dom.js"></script>
 		
 		<!-- React -->
 		<script src="https://fb.me/react-15.3.0.min.js"></script>
@@ -70,16 +72,7 @@
 						<div id="content" class="8u skel-cell-important">
 							<section>
 								<div class="listform">
-									<header>
-										<h2>List an Item</h2>
-									</header>
-									<div id="preview" data-itemnum=0>
-										<form id="listcreate">
-											<input type="text" name="itemname" placeholder="Item name" id="itemname" class="radius" required><br>
-											<input type="text" name="listcondition" placeholder="Condition" id="condition" class="radius" required><br>
-											<textarea placeholder="Enter a description of the item" id="description" style="height:200px" required></textarea><br>
-											<input type="button" class="registersubmit" name="listsubmit" id="listsubmit" value="List">
-										</form>	
+									<div id="reactlistinput">
 									</div>
 								</div>
 								
@@ -120,16 +113,4 @@
 		</div>
 
 	</body>
-	<script>
-		// Initialize Firebase
-		"use strict";
-		var config = {
-			apiKey: "AIzaSyCowZvhT-bUUoBd0xZv1OTW9Q1tNxZxRGk",
-			authDomain: "whos-selling.firebaseapp.com",
-			databaseURL: "https://whos-selling.firebaseio.com",
-			storageBucket: "",
-			messagingSenderId: "512922207100"
-		};
-		firebase.initializeApp(config);		
-	</script>
 </html>
