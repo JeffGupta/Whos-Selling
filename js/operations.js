@@ -17,7 +17,7 @@ $('#anotheritem').click(function()
 	
 });
 
-$('#listsubmit').click(function()
+/* $('#listsubmit').click(function()
 {
 	var itemname = document.getElementById("itemname").value;
 	var condition = document.getElementById("condition").value;
@@ -30,6 +30,6 @@ $('#listsubmit').click(function()
 	//remove the entire listinput div
 	var preview = document.getElementById("preview");
 	preview.parentNode.removeChild(preview);
-});
+}); */
 
 });
