@@ -17,6 +17,9 @@ On the homepage a user can hover over the categories (Science, Math, History, En
 Login - IMPLEMENTED (2)
 The user can log in using his/her new credentials that have been added to the firebase server rom the registration. 
 
+Account Details - Remade with react for HW5
+Displays account information with react
+
 Make a Listing - IMPLEMENTED with react for HW4
 If the user wants to sell , he or she can make a listing on the site. Furthermore, the user has to option to review their listing before making it public. React will be used as we implement this feature. 
 
