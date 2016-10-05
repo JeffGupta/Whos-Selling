@@ -35,7 +35,7 @@ $(document).ready(function()
 		
 		render: function () {
 			return {
-				<div>
+				<div className="">
 					<h2>{this.props.title}</h2>
 					<div id="account_view">
 						<AccountDisplay loggedIn={this.state.loggedIn}/>
@@ -131,6 +131,8 @@ $(document).ready(function()
 			};
 		}
 	});
+	
+	ReactDOM.redner(<AccountView />,document.getElementById('account_panel'));
 	
 	/* OLD CODE WITH JQUERY
 	//once page loads, display account information
