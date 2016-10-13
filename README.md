@@ -20,7 +20,7 @@ The user can log in using his/her new credentials that have been added to the fi
 Account Details - Remade with react for HW5
 Displays account information with react
 
-Contact Information - IMPLEMENTED with d3.js for HW5
+Contact Information - IMPLEMENTED with d3.js for HW5. Currently only shown at bottom of account details page after logging in, will change in the future
 Provide users with contact information in case they have any inquires or simply want to know the members of the site. In a craigslist-like site, there's bound to be people with complaints or questions.
 
 Make a Listing - IMPLEMENTED with react for HW4

@@ -81,14 +81,12 @@
 		
 		componentDidMount: function() {
 			var $this = $(ReactDOM.findDOMNode(this));
-			account_username = getCookie("username");
+			account_username = getCookie("username"); //first grab the username from cookies
 			this.putData();
 		},
 		
 		putData: function() {
-			//first grab the username from cookies
-			
-			console.log(account_username);
+			//grab appropriate html elements
 			var username = document.getElementById("username_label");
 			var firstname = document.getElementById("firstname_label");
 			var lastname = document.getElementById("lastname_label");
@@ -96,6 +94,7 @@
 			var email = document.getElementById("email_label");
 			var major = document.getElementById("major_label");
 			
+			//create paths to attributes
 			const databaseURL = "https://whos-selling.firebaseio.com";
 			var accountURL = databaseURL + "/accounts/" + account_username;
 			var firstnameURL = accountURL + "/first_name.json";
@@ -130,6 +129,7 @@
 			data = xhttp.responseText;
 			var major_data = JSON.parse(data);
 			
+			//append data
 			username.appendChild(document.createTextNode("Username: " + account_username));
 			firstname.appendChild(document.createTextNode("First Name: " + first_data));
 			lastname.appendChild(document.createTextNode("Last Name: " + last_data));
