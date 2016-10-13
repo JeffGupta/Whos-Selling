@@ -55,7 +55,7 @@ $(document).ready(function()
 			major: React.PropTypes.string
 		},
 		
-		getDefaults: function() {
+		getDefaultProps: function() {
 			username: ""
 			firstname: ""
 			lastname: ""
