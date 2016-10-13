@@ -17,7 +17,12 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
-		<script src="js/account.js"></script>
+		
+		<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+		<script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+		<script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+		<script type="text/babel" src="js/account.js"></script>
+		<script src="js/operations.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -74,16 +79,8 @@
 											<h2>Account Information</h2>
 										</header>
 										<h5 id="loginalert"></h5>
-										<div>
-											<ul>
-											<!-- javascript will fill in account info based on cookies -->
-												<li id="userlabel"></li>
-												<li id="fnamelabel"></li>
-												<li id="lnamelabel"></li>
-												<li id="doblabel"></li>
-												<li id="emaillabel"></li>
-												<li id="majorlabel"></li>
-											</ul>
+										<div id="account_panel">
+											
 										</div>
 							</section>				
 						</div>
@@ -120,6 +117,12 @@
 
 		</style>
 				<p class = "transformed"> AF Designs: © (CC0)</p>
+				
+					<div id="contact">
+					</div>
+				
 		</div>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script type="text/javascript" src="js/contact.js"></script>
 	</body>
 </html>
