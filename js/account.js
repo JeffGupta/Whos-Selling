@@ -13,7 +13,7 @@ $(document).ready(function()
 	
 	var accountRef = firebase.database().ref('accounts');
 	
-	putaccount();
+	//putaccount();
 	
 	var AccountView = React.createClass({
 		propTypes: {
@@ -27,21 +27,27 @@ $(document).ready(function()
 		},
 		
 		//used just to add a little banner to the page
-		getDefaults: function() {
+		getDefaultProps: function() {
 			return {
 				label: "Account Overview"
 			}
 		},
 		
-		render: function () {
-			return {
-				<div className="">
+		render: function() {
+			return (
+				<div>
+					<div className="">
+						<div className="">
+						</div>
+					</div>
+				</div>
+ 				<div>
 					<h2>{this.props.title}</h2>
 					<div id="account_view">
 						<AccountDisplay loggedIn={this.state.loggedIn}/>
 					</div>
 				</div>
-			};
+			)
 		}
 	});
 	
@@ -66,7 +72,7 @@ $(document).ready(function()
 		
 		putData: function() {
 			//first grab the username from cookies
-			//var account_username = getCookie("username");
+			var account_username = getCookie("username");
 			
 			var username = document.getElementById("username_label");
 			var firstname = document.getElementById("firstname_label");
@@ -76,7 +82,7 @@ $(document).ready(function()
 			var major = document.getElementById("major_label");
 			
 			const databaseURL = "https://whos-selling.firebaseio.com";
-			var accountURL = databaseURL + "/accounts/" + "b";
+			var accountURL = databaseURL + "/accounts/" + account_username;
 			var firstnameURL = accountURL + "/first_name.json";
 			var lastnameURL = accountURL + "/last_name.json";
 			var birthURL = accountURL + "/date_of_birth.json";
@@ -132,43 +138,5 @@ $(document).ready(function()
 		}
 	});
 	
-	ReactDOM.redner(<AccountView />,document.getElementById('account_panel'));
-	
-	/* OLD CODE WITH JQUERY
-	//once page loads, display account information
-	function putaccount()
-	{
-		//promise to get snapshot with username key
-		var username = getCookie("username");
-		accountRef.child(username).once('value')
-			.then(function(snapshot){
-				return snapshot.val();
-			})
-			.then(function(snapshot){
-				var userlabel = document.getElementById("userlabel");
-				var fnamelabel = document.getElementById("fnamelabel");
-				var lnamelabel = document.getElementById("lnamelabel");
-				var doblabel = document.getElementById("doblabel");
-				var emaillabel = document.getElementById("emaillabel");
-				var majorlabel = document.getElementById("majorlabel");
-				
-				//display account info
-				userlabel.innerHTML = "Username: "+username;
-				fnamelabel.innerHTML = "First name: "+snapshot.first_name;
-				lnamelabel.innerHTML = "Last name: "+snapshot.last_name;
-				doblabel.innerHTML = "Date of birth: "+snapshot.date_of_birth;
-				emaillabel.innerHTML = "email: "+snapshot.email;
-				majorlabel.innerHTML = "major: "+snapshot.major;
-			})
-			.catch(function(error){
-				console.log("error");
-			});
-	}
-	
-	function getCookie(name)
-	{
-		var re = new RegExp(name + "=([^;]+)");
-		var value = re.exec(document.cookie);
-		return (value != null) ? unescape(value[1]) : null;
-	} */
+	ReactDOM.render(<AccountView />,document.getElementById('account_panel'));
 });
