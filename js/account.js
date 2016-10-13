@@ -103,8 +103,8 @@
 			var birthURL = accountURL + "/date_of_birth.json";
 			var emailURL = accountURL + "/email.json";
 			var majorURL = accountURL + "/major.json";
-			
 			var xhttp = new XMLHttpRequest();
+			
 			xhttp.open("GET",firstnameURL,false);
 			xhttp.send();
 			var data = xhttp.responseText;
@@ -130,7 +130,7 @@
 			data = xhttp.responseText;
 			var major_data = JSON.parse(data);
 			
-			username.appendChild(document.createTextNode("Username: " + username_data));
+			username.appendChild(document.createTextNode("Username: " + account_username));
 			firstname.appendChild(document.createTextNode("First Name: " + first_data));
 			lastname.appendChild(document.createTextNode("Last Name: " + last_data));
 			birth.appendChild(document.createTextNode("Date of Birth: " + birth_data));
