@@ -36,12 +36,6 @@ $(document).ready(function()
 		render: function() {
 			return (
 				<div>
-					<div className="">
-						<div className="">
-						</div>
-					</div>
-				</div>
- 				<div>
 					<h2>{this.props.title}</h2>
 					<div id="account_view">
 						<AccountDisplay loggedIn={this.state.loggedIn} />
