@@ -6,7 +6,7 @@ var testData = [
 	];
 
 // set up the table
-	var table = d3.select("#contact").append("table");
+	var table = d3.select("#contact").append("table").attr("class","datatable");
 	thead = table.append("thead").append("tr");
 	tbody = table.append("tbody");
 
@@ -14,7 +14,7 @@ var testData = [
 // first create the table rows (3 needed)
 
 var tr = tbody.selectAll("tr")
-		.attr("class","datatable");
+		
         .data(testData.filter(function(d,i){
         if (i >= 0 ) {   // don't need the first row
             return d;  
