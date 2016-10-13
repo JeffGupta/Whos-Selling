@@ -11,6 +11,7 @@
 	firebase.initializeApp(config);
 	
 	var accountRef = firebase.database().ref('accounts');
+	var account_username;
 	
 	//putaccount();
 	
@@ -79,12 +80,13 @@
 		},
 		
 		componentDidMount: function() {
-			putData();
+			var $this = $(ReactDOM.findDOMNode(this));
+			var account_username = getCookie("username");
 		},
 		
 		putData: function() {
 			//first grab the username from cookies
-			var account_username = getCookie("username");
+			
 			
 			var username = document.getElementById("username_label");
 			var firstname = document.getElementById("firstname_label");
