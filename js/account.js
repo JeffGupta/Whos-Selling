@@ -104,8 +104,8 @@
 			var emailURL = accountURL + "/email.json";
 			var majorURL = accountURL + "/major.json";
 			
-			xhttp.open("GET",firstnameURL,false);
-			xhttp.send();
+			xmlhttp.open("GET",firstnameURL,false);
+			xmlhttp.send();
 			var data = xhttp.responseText;
 			var first_data = JSON.parse(data);
 			
