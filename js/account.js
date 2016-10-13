@@ -16,7 +16,7 @@
 	
 	var AccountView = React.createClass({
 		propTypes: {
-			label: React.PropTypes.string
+			label: React.PropTypes.string,
 		},
 		
 		getInitialState: function() {
@@ -28,7 +28,7 @@
 		//used just to add a little banner to the page
 		getDefaultProps: function() {
 			return {
-				label: "Account Overview"
+				label: "Account Overview",
 			}
 		},
 		
@@ -44,7 +44,7 @@
 		}
 	});
 	
-	var AccountDisplay = createClass({
+	var AccountDisplay = React.createClass({
 		propTypes: {
 			username: React.PropTypes.string,
 			firstname: React.PropTypes.string,
