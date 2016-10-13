@@ -65,18 +65,18 @@ $(document).ready(function()
 		},
 		
 		render: function() {
-			return {
+			return (
 				<div>
 					<u1>
-						/*<li id="username_label">{this.props.username}</li>
-						<li id="firstname_label">{this.props.firstname}</li>*/
+						<li id="username_label">{this.props.username}</li>
+						<li id="firstname_label">{this.props.firstname}</li>
 						<li id="lastname_label">{this.props.lastname}</li>
 						<li id="birth_label">{this.props.birth}</li>
 						<li id="email_label">{this.props.email}</li>
 						<li id="major_label">{this.props.major}</li>
 					</u1>
 				</div>
-			};
+			);
 		},
 		
 		putData: function() {
