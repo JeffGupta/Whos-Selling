@@ -88,7 +88,7 @@
 		putData: function() {
 			//first grab the username from cookies
 			
-			
+			console.log(account_username);
 			var username = document.getElementById("username_label");
 			var firstname = document.getElementById("firstname_label");
 			var lastname = document.getElementById("lastname_label");
