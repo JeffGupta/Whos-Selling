@@ -20,9 +20,11 @@ The user can log in using his/her new credentials that have been added to the fi
 Account Details - Remade with react for HW5
 Displays account information with react
 
+Contact Information - IMPLEMENTED with d3.js for HW5
+Provide users with contact information in case they have any inquires or simply want to know the members of the site. In a craigslist-like site, there's bound to be people with complaints or questions.
+
 Make a Listing - IMPLEMENTED with react for HW4
 If the user wants to sell , he or she can make a listing on the site. Furthermore, the user has to option to review their listing before making it public. React will be used as we implement this feature. 
 
 Search - IMPLEMENTED for third feature in HW4 
-From the ISBN, a user can search for the book he/she is interested in by typing in a book’s corresponding ISBN. At the moment not all ISBN will work because we are using the google books api. Later we will add more api's like amazon's to increase the number of books. It will prompt the user to enter their books ISBN and will return a preview of the book as well as where you can purchase the book from. We will add more features to this later, in particular comparining local prices on campus to that of online. 
- 
+From the ISBN, a user can search for the book he/she is interested in by typing in a book’s corresponding ISBN. At the moment not all ISBN will work because we are using the google books api. Later we will add more api's like amazon's to increase the number of books. It will prompt the user to enter their books ISBN and will return a preview of the book as well as where you can purchase the book from. We will add more features to this later, in particular comparining local prices on campus to that of online.
