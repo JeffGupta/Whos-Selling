@@ -78,6 +78,10 @@
 			);
 		},
 		
+		componentDidMount: function() {
+			putData();
+		},
+		
 		putData: function() {
 			//first grab the username from cookies
 			var account_username = getCookie("username");
