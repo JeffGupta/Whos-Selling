@@ -82,6 +82,7 @@
 		componentDidMount: function() {
 			var $this = $(ReactDOM.findDOMNode(this));
 			var account_username = getCookie("username");
+			console.log(account_username);
 		},
 		
 		putData: function() {
