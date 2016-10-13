@@ -1,8 +1,7 @@
 var testData = [
-		["a","a","a","a"],
-		["b","b","b","b"],
-		["c","c","c","c"],
-		["d","d","d","d"]
+		["Email","Flee8@gmu.edu"],
+		["Voice","703-209-2548"],
+		["Address","4400 University Dr, Fairfax, VA 22030"]
 	];
 
 // set up the table
