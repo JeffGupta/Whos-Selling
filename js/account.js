@@ -47,8 +47,8 @@ $(document).ready(function()
 	
 	var AccountDisplay = createClass({
 		propTypes: {
-			username: React.PropTypes.string,
-			firstname: React.PropTypes.string,
+			uname: React.PropTypes.string,
+			fname: React.PropTypes.string,
 			lastname: React.PropTypes.string,
 			birth: React.PropTypes.string,
 			email: React.PropTypes.string,
@@ -68,8 +68,8 @@ $(document).ready(function()
 			return {
 				<div>
 					<u1>
-						<li id="username_label">{this.props.username}</li>
-						<li id="firstname_label">{this.props.firstname}</li>
+						<li id="username_label">{this.props.uname}</li>
+						<li id="firstname_label">{this.props.fname}</li>
 						<li id="lastname_label">{this.props.lastname}</li>
 						<li id="birth_label">{this.props.birth}</li>
 						<li id="email_label">{this.props.email}</li>
