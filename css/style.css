@@ -477,6 +477,8 @@
     font-size: 12px;
     background: #fff;
     margin: 45px;
+	margin-left:auto; 
+    margin-right:auto;
     width: 480px;
     border-collapse: collapse;
     text-align: center;
