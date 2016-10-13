@@ -1,5 +1,4 @@
-$(document).ready(function()
-{
+
 	// Initialize Firebase
 	"use strict";
 	var config = {
@@ -133,4 +132,3 @@ $(document).ready(function()
 	});
 	
 	ReactDOM.render(<AccountView />,document.getElementById('account_panel'));
-});
