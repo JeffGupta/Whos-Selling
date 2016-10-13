@@ -15,7 +15,7 @@ var testData = [
 
 var tr = tbody.selectAll("tr")  
         .data(testData.filter(function(d,i){
-        if (i > 0 ) {   // don't need the first row
+        if (i >= 0 ) {   // don't need the first row
             return d;  
         }}))
         .enter()
