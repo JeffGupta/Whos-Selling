@@ -44,7 +44,7 @@ $(document).ready(function()
  				<div>
 					<h2>{this.props.title}</h2>
 					<div id="account_view">
-						<AccountDisplay loggedIn={this.state.loggedIn}a />
+						<AccountDisplay loggedIn={this.state.loggedIn} />
 					</div>
 				</div>
 			);
