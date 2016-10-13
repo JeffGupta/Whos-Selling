@@ -13,7 +13,8 @@ var testData = [
 
 // first create the table rows (3 needed)
 
-var tr = tbody.selectAll("tr")  
+var tr = tbody.selectAll("tr")
+		.attr("class","datatable");
         .data(testData.filter(function(d,i){
         if (i >= 0 ) {   // don't need the first row
             return d;  
