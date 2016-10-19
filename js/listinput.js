@@ -171,6 +171,4 @@ $(document).ready(function()
 	  lists: [],
 	  newlist: Object.assign({}, LIST_TEMPLATE),
 	});
-
-
 });

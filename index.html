@@ -13,6 +13,8 @@
 		<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
 		
 		<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		
 		<script>
 			// Initialize Firebase
 			"use strict";
@@ -161,7 +163,20 @@
 			transform: rotate(360deg);
 		}
 		</style>
+		<!-- Added in new transition and transform feature as well as using d3 to change color of background for our rotating logo -->
 				<p class = "transformed"> AF Designs: © (CC0)</p>
+				<script>
+				
+				d3.select("transformed").transition()
+				.duration(750)
+				.delay(function(d, i) { return i * 10; })
+				.attr("r", function(d) { return Math.sqrt(d * scale); }); 
+				
+				d3.select("body").transition()
+				.style("background-color", "gray");
+				
+				</script>
+				
 		</div>
 
 	</body>
