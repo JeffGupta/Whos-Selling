@@ -69,4 +69,21 @@ describe("ListForm Spies & Firebase", function () {
             });
         });
 
+		describe('ListView', function () {
+			
+var TestUtils = React.addons.TestUtils;
+var ListViewComponent, element, renderedDom;
+		
+beforeEach(function (done) {
+		element = React.createElement(ListView);
+		ListViewComponent = TestUtils.renderIntoDocument(element);
+		todoAppComponent.setState({items: [{text: "testItem"}]}, done);
+	});
+	it("Has a ListForm component", function() {
+		expect(function () {
+			TestUtils.findRenderedComponentWithType(ListViewComponent, ListForm);
+		}).not.toThrow();
+	});
+});
+
 
