@@ -28,3 +28,7 @@ If the user wants to sell , he or she can make a listing on the site. Furthermor
 
 Search - IMPLEMENTED for third feature in HW4 
 From the ISBN, a user can search for the book he/she is interested in by typing in a book’s corresponding ISBN. At the moment not all ISBN will work because we are using the google books api. Later we will add more api's like amazon's to increase the number of books. It will prompt the user to enter their books ISBN and will return a preview of the book as well as where you can purchase the book from. We will add more features to this later, in particular comparining local prices on campus to that of online.
+
+________________________________________________________________________________________________________________________________________
+HW6 
+Added 7 jasmine test cases. Using Spec runner in jasmine folder. 
