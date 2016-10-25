@@ -1,6 +1,6 @@
 var express = require('express');
 //var gcloud = require('google-cloud');
-//var firebase = require('firebase');
+var firebase = require('firebase');
 //var multer = require("multer");
 //var uploader = multer({ storage: multer.memoryStorage({}) });
 var app = express();
@@ -10,7 +10,6 @@ var port = process.env.PORT || 3000;
 app.use(express.static('public'));
 */
 
-var express = require('express');
 var app = express();
 
 //app.set('port', (process.env.PORT || 5000));
