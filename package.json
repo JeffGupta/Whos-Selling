@@ -11,7 +11,7 @@
   "dependencies": {
     "express": "^4.14.0",
 	"firebase": "^3.4.1",
-	"nodemon": "^3.4.1",
-	"body-parser": "^1.11.0"
+	"body-pasrser": "^1.15.2",
+	"nodemon": "^1.11.0"
   }
 }
