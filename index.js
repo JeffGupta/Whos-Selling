@@ -1,6 +1,6 @@
 var express = require('express');
-var gcloud = require('google-cloud');
-var firebase = require('firebase');
+//var gcloud = require('google-cloud');
+//var firebase = require('firebase');
 var multer = require("multer");
 var uploader = multer({ storage: multer.memoryStorage({}) });
 var app = express();
