@@ -2,7 +2,7 @@ var express = require('express');
 //var gcloud = require('google-cloud');
 //var firebase = require('firebase');
 //var multer = require("multer");
-var uploader = multer({ storage: multer.memoryStorage({}) });
+//var uploader = multer({ storage: multer.memoryStorage({}) });
 var app = express();
 var port = process.env.PORT || 3000;
 /*
