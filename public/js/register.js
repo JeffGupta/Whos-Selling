@@ -37,8 +37,9 @@ $(document).ready(function() {
 					var email = document.getElementById("email").value;
 					var regex = /.*.gmu.edu$/igm;
 					var validemail = regex.test($(this).val());
+					console.log("in exists: "+validemail);
 						
-					if(validemail == true) {
+					if(validemail == false) {
 						//retrieve data fields
 						var username = document.getElementById("username").value;
 						var pass = document.getElementById("password").value;
@@ -48,6 +49,7 @@ $(document).ready(function() {
 						var major = document.getElementById("major").value;
 						
 						//now add account since it passed error checking
+						console.log("in validemail");
 						addaccount(username,pass,first,last,dob,email,major);
 						return;
 					}
@@ -65,14 +67,15 @@ $(document).ready(function() {
 		
 	function addaccount(username,pass,first,last,dob,email,major)
 	{
-		//create new user in firebase
-		firebase.database().ref('accounts/'+username).set({
+		var account = {
+			username: username,
 			pass: pass,
 			first_name: first,
 			last_name: last,
 			date_of_birth: dob,
 			email: email,
 			major: major
-		});
+		}		
+		$.post("/account", {data: account});
 	}
 });

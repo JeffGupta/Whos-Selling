@@ -43,7 +43,7 @@ $(document).ready(function()
 				{
 					if(accountsnapshot.pass == pass) {
 						storeusername(username);
-						document.location.href = '../Whos-Selling/account.html';
+						document.location.href = '../account.html';
 					}
 				}
 				else
