@@ -1,12 +1,11 @@
 var express = require('express');
+var firebase = require('firebase');
 var app = express();
-var path = require('path');
+var port = process.env.PORT || 3000;
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 // viewed at http://localhost:8080
-app.get('/', function(req, res) {
-    res.sendFile(path.join('public/index.html'));
+app.listen(port, function () {
+	console.log(port);
 });
-
-app.listen(3000);
