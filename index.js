@@ -7,14 +7,6 @@ var bodyParser = require('body-parser');
 var app = express();
 var port = process.env.PORT || 3000;
 
-//Code for Upload
-var express = require('express');
-var app2 = express();
-var path = require('path');
-var formidable = require('formidable');
-var fs = require('fs');
-
-
 firebase.initializeApp({
 	serviceAccount: "privkey.json",
 	databaseURL: "https://whos-selling.firebaseio.com"
@@ -42,6 +34,11 @@ app.post('/account', function (req, res) {
 		major: req.body.data.major
 	});
 });
+var express = require('express');
+var app = express();
+var path = require('path');
+var formidable = require('formidable');
+var fs = require('fs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -81,6 +78,6 @@ app.post('/upload', function(req, res){
 
 });
 
-var server = app.listen(3000, function(){
-  console.log('Server listening on port 3000');
-});
+
+
+
