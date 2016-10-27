@@ -35,6 +35,7 @@ app.post('/account', function (req, res) {
 	});
 });
 //code for upload
+//////////////////////////
 var express = require('express');
 var app = express();
 var path = require('path');
@@ -78,7 +79,52 @@ app.post('/upload', function(req, res){
   form.parse(req);
 
 });
+/////////////////////////////
+//code for google cloud
+var gcloud = require('google-cloud');
+var multer = require("multer");
+var uploader = multer({ storage: multer.memoryStorage({}) });
+
+var gcs = gcloud.storage({
+    projectId: '512922207100', //from storage console, then click settings, then "x-goog-project-id" added my own
+    keyFilename: 'privkey.json' //the key we already set up in firebase
+});
+
+function getPublicUrl (filename) {
+    return 'https://storage.googleapis.com/' + CLOUD_BUCKET + '/' + filename;
+}
+
+//From https://cloud.google.com/nodejs/getting-started/using-cloud-storage
+function sendUploadToGCS (req, res, next) {
+    if (!req.file) {
+        return next();
+    }
+
+    var gcsname = Date.now() + req.file.originalname;
+    var file = bucket.file(gcsname);
 
 
+    var stream = file.createWriteStream({
+        metadata: {
+            contentType: req.file.mimetype
+        }
+    });
 
+    stream.on('error', function (err) {
+        req.file.cloudStorageError = err;
+        next(err);
+    });
+
+    stream.on('finish', function () {
+        req.file.cloudStorageObject = gcsname;
+        req.file.cloudStoragePublicUrl = getPublicUrl(gcsname);
+        var options = {
+            entity: 'allUsers',
+            role: gcs.acl.READER_ROLE
+        };
+        file.acl.add(options, function(a,e){next();});//Make file world-readable; this is async so need to wait to return OK until its done
+    });
+
+    stream.end(req.file.buffer);
+}
 
