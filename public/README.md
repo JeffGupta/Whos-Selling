@@ -32,3 +32,13 @@ From the ISBN, a user can search for the book he/she is interested in by typing 
 ________________________________________________________________________________________________________________________________________
 HW6 
 Added 7 jasmine test cases. Using Spec runner in jasmine folder. 
+
+________________________________________________________________________________________________________________________________________
+HW7
+We have set up Heroku Hosting for hosting our Node.js application. We have also created the Node.js backend 
+for our web application. We have a file upload feature which is called "upload". It can be navigated to from
+the home page at the moment.
+
+link:
+https://whos-selling.herokuapp.com/index.html
+ 
