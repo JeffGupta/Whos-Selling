@@ -47,7 +47,7 @@ app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, 'public/upload.html'));
 });
 
-app.post('/account', function(req, res){
+app.post('/upload', function(req, res){
 
   // create an incoming form object
   var form = new formidable.IncomingForm();
