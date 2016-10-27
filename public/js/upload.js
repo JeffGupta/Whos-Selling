@@ -18,11 +18,11 @@ $('#upload-input').on('change', function(){
       var file = files[i];
 
       // add the files to formData object for the data payload
-      formData.append('uploads[]', file, file.name);
+      formData.append('account[]', file, file.name);
     }
 
     $.ajax({
-      url: '/upload',
+      url: '/account',
       type: 'POST',
       data: formData,
       processData: false,

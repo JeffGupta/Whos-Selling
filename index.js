@@ -34,19 +34,20 @@ app.post('/account', function (req, res) {
 		major: req.body.data.major
 	});
 });
+//code for upload
 var express = require('express');
 var app = express();
 var path = require('path');
 var formidable = require('formidable');
 var fs = require('fs');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname, 'views/index.html'));
+  res.sendFile(path.join(__dirname, 'public/upload.html'));
 });
 
-app.post('/upload', function(req, res){
+app.post('/account', function(req, res){
 
   // create an incoming form object
   var form = new formidable.IncomingForm();
@@ -55,7 +56,7 @@ app.post('/upload', function(req, res){
   form.multiples = true;
 
   // store all uploads in the /uploads directory
-  form.uploadDir = path.join(__dirname, '/uploads');
+  form.uploadDir = path.join(__dirname, '/account');
 
   // every time a file has been uploaded successfully,
   // rename it to it's orignal name
