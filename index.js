@@ -82,8 +82,8 @@ app.post('/upload', function(req, res){
 /////////////////////////////
 //code for google cloud
 var gcloud = require('google-cloud');
-var multer = require("multer");
-var uploader = multer({ storage: multer.memoryStorage({}) });
+//var multer = require("multer");
+//var uploader = multer({ storage: multer.memoryStorage({}) });
 
 var gcs = gcloud.storage({
     projectId: '512922207100', //from storage console, then click settings, then "x-goog-project-id" added my own

@@ -76,4 +76,13 @@ $(document).ready(function()
 	{
 	  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 	}
+	
+	function onSignIn(googleUser) {
+	  var profile = googleUser.getBasicProfile();
+	  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+	  console.log('Name: ' + profile.getName());
+	  console.log('Image URL: ' + profile.getImageUrl());
+	  console.log('Email: ' + profile.getEmail());
+	}
+
 });
