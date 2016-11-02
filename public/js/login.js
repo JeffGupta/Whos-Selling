@@ -12,6 +12,7 @@ $(document).ready(function()
 	//firebase.initializeApp(config);
 	
 	var accountRef = firebase.database().ref('accounts');
+	var googleRef = firebase.database().ref('googles');
 	var today;
 	var expiry;
 	
@@ -76,8 +77,45 @@ $(document).ready(function()
 	{
 	  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 	}
-
 	
-
-
+	/*function addattempt(email,name)
+	{
+		var errormsg;
+		
+		//promise to get child with key that matches email
+		googleRef.child(email).once('value')
+			.then(function(snapshot){
+				return (snapshot.val() !== null);
+			})
+			.then(function(exists){
+				//if the email isn't taken, check email
+				if(exists !== true)
+				{
+					var isgoogle = true;
+					addaccount(isgoogle,name,email);
+					return;
+				}
+				else {
+					//storeemail(email); //email, is google account)
+					document.location.href = '../account.html';
+				}
+			})
+			.catch(function(error){
+				console.log("error");
+			});
+	}
+		
+	function addaccount(isgoogle,name,email)
+	{
+		var account = {
+			isgoogle: isgoogle,
+			name: name,
+			email: email
+		}		
+		$.post("/account", {data: account});
+	}
+	
+	function emailToKey(emailAddress) {
+		return emailAddress.replace(/[.]/g, '%20');
+	}*/
 });

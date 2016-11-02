@@ -93,16 +93,11 @@
 										  console.log('User signed in.');
 										 function onSignIn(googleUser) {
 										  var profile = googleUser.getBasicProfile();
-										  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-										  console.log('Name: ' + profile.getName());
-										  console.log('Image URL: ' + profile.getImageUrl());
-										  console.log('Email: ' + profile.getEmail());
-										}
+										  addattempt(profile.getEmail(),profile.getName());
+										 }
 										console.log('User onSignIn.');
 
 										// auth2 is initialized with gapi.auth2.init() and a user is signed in.
-
-										
 									</script>
 									<a href="#" onclick="signOut();">Sign out</a>
 									<script>
@@ -169,6 +164,68 @@
 			storageBucket: "",
 			messagingSenderId: "512922207100"
 		};
-		firebase.initializeApp(config);		
+		firebase.initializeApp(config);
+		
+		var googleRef = firebase.database().ref('googles');
+		
+	function addattempt(email,name)
+	{
+		var errormsg;
+		
+		//promise to get child with key that matches email
+		googleRef.child(emailToKey(email)).once('value')
+			.then(function(snapshot){
+				return (snapshot.val() !== null);
+			})
+			.then(function(exists){
+				//if the email isn't taken, check email
+				if(exists !== true)
+				{
+					var isgoogle = true;
+					addaccount(isgoogle,name,email);
+					console.log("touch");
+					storeusername(email);
+					document.location.href = '../account.html';
+				}
+				else {
+					//storeemail(email); //email, is google account)
+					console.log("touch");
+					storeusername(email);
+					console.log("touch");
+					document.location.href = '../account.html';
+				}
+			})
+			.catch(function(error){
+				console.log("error");
+			});
+	}
+		
+	function addaccount(isgoogle,name,email)
+	{
+		var account = {
+			isgoogle: isgoogle,
+			name: name,
+			email: email
+		}		
+		$.post("/account", {data: account});
+	}
+	
+	function emailToKey(emailAddress) {
+		return emailAddress.replace(/[.]/g, '%20');
+	}
+	
+	function storeusername(username)
+	{
+		setCookie("username", username);
+		return true;
+	}
+	
+	function setCookie(name, value)
+	{
+		var today = new Date();
+		var expiry = new Date(today.getTime() + 30 * 60 * 1000); // plus 30 days
+		document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+		console.log("touch");
+	}
 	</script>
 </html>
