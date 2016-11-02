@@ -25,14 +25,21 @@ app.listen(port, function () {
 
 //write to firebase given from data by account.js
 app.post('/account', function (req, res) {
-	firebase.database().ref('accounts/'+req.body.data.username).set({
+	if(req.body.data.isgoogle != null) {
+		firebase.database().ref('googles/'+emailToKey(req.body.data.email)).set({
+		name: req.body.data.name
+		});
+	}
+	else {
+		firebase.database().ref('accounts/'+req.body.data.username).set({
 		pass: req.body.data.pass,
 		first_name: req.body.data.first_name,
 		last_name: req.body.data.last_name,
 		date_of_birth: req.body.data.date_of_birth,
 		email: req.body.data.email,
 		major: req.body.data.major
-	});
+		});
+	}
 });
 //code for upload
 //////////////////////////
@@ -126,5 +133,9 @@ function sendUploadToGCS (req, res, next) {
     });
 
     stream.end(req.file.buffer);
+}
+
+function emailToKey(emailAddress) {
+		return emailAddress.replace(/[.]/g, '%20');
 }
 
