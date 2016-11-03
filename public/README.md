@@ -55,13 +55,26 @@ The google api checks to ensure that the user inputs the correct GMAIL credentia
 The user can also choose to “sign out” of the web app by clicking the red sign out button. The user can sign in and out from LOGIN. 
 
 
-Search - IMPLEMENTED(3) for third feature in HW4 From the ISBN, a user can search for the book he/she is interested in by typing in a book’s corresponding ISBN. 
+Search Books - IMPLEMENTED(3) for third feature in HW4 From the ISBN, a user can search for the book he/she is interested in by typing in a book’s corresponding ISBN. 
 At the moment not all ISBN will work because we are using the google books api. Later we will add more api's like amazon's to increase the number of books. 
 It will prompt the user to enter their books ISBN and will return a preview of the book as well as where you can purchase the book from. 
 We will add more features to this later, in particular comparing local prices on campus to that of online.
 
 
+Preview Books- IMPLEMENTED(5) Not all of the ISBNs are working. 
+Only books in V1 of Google’s Books API are currently working. 
+We are using google for now because were not able to get Amazon API working. 
+We are using google api for book search and preview. 
+You can read the digital version of the book for free!
 
+
+ISBNs to try:
+0060930314
+0738531367
+
+
+Upload - IMPLEMENTED(6) Users can upload a profile picture as well as 
+any relevant documents they feel they may need. 
 
 Frank:
 Registration with Firebase - IMPLEMENTED (4) A new user to AF-Books may create a registration upon completing the required fields. 
@@ -72,5 +85,6 @@ After which, a user can log in using his/her credentials on the login page.
 
 Login - IMPLEMENTED (2) The user can log in using his/her new credentials that have been added to the firebase server from the registration.
 
+Preview Listing (7) - On the sell page a logged in user can preview a listing. 
 
  
