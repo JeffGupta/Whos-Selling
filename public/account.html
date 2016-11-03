@@ -24,11 +24,12 @@
 		<script type="text/babel" src="js/account.js"></script>
 		<script src="js/operations.js"></script>
 		
-		<!--Jasmine-->
+		<!--Jasmine--
 		<link rel="stylesheet" type="text/css" href="../jasmine/lib/jasmine-2.5.2/jasmine.css">
 		<script type="text/javascript" src="../jasmine/lib/jasmine-2.5.2/jasmine.js"></script>
 		<script type="text/javascript" src="../jasmine/lib/jasmine-2.5.2/jasmine-html.js"></script>
 		<script type="text/javascript" src="../jasmine/lib/jasmine-2.5.2/boot.js"></script>
+		-->
 		
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
@@ -53,8 +54,10 @@
 						<ul>
 							<li><a href="index.html">Homepage</a></li>
 							<li><a href="login.html">Login</a></li>
-							<li><a href="register.html#main">Register</a></li>
+							<li><a href="register.html">Register</a></li>
+							<li><a href="account.html#main">Account</a></li>
 							<li><a href="listinput.html">Sell</a></li>
+							<li><a href="upload.html">Upload</a></li>
 						</ul>
 					</nav>
 
@@ -71,9 +74,13 @@
 						<div id="sidebar" class="4u">
 							<section>
 								<header>
-									<h2 align="center">FAQ</h2>
+									<h2 align="left">Other Information</h2>
+										<div id="contact" align = "left"> 
+										<script src="https://d3js.org/d3.v4.min.js"></script>
+										<script type="text/javascript" src="js/contact.js"></script>
+										</div>
 								</header>
-								<p align="center"><b>Placeholder for account options</b><br>
+								<p align="left"><b>Placeholder for account options</b><br>
 							</section>
 						</div>
 					<!-- Sidebar -->
@@ -83,13 +90,12 @@
 							<section>
 									<div class="registerform">
 										<header>
-											<h2>Account Information</h2>
+											<h2 align = "center">New Account Info</h2>
 										</header>
-										<h5 id="loginalert"></h5>
-										<div id="account_panel">
-											
-										</div>
-							</section>				
+										<h5 align = "center" id="loginalert"></h5>
+										<div align = "center" id="account_panel"></div>
+										
+							</section>								
 						</div>
 					<!-- /Content -->
 				</div>
@@ -98,38 +104,8 @@
 	<!-- Main -->
 
 	<!-- Copyright -->
-		<div id="copyright">
-		
-		<style>
-		.transformed{
-		position: relative;
-		top:7.5px; 
-		left:7.5px; 
-			<!-- Transform requirement-->
-		transform: scale(1.2,1.1);
-		
-		-webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
-		transition: width 2s, height 2s, background-color 2s, transform 2s;
-		}
-		
-		.transformed:hover {
-			-webkit-transform: rotate(360deg);
-			transform: rotate(360deg);
-		}
 
-			<!-- logo is transfored -->
-
-		<!--on hover make copyright symbol shrink-->
-		
-
-		</style>
 				<p class = "transformed"> AF Designs: © (CC0)</p>
-				
-					<div id="contact">
-					</div>
-				
-		</div>
-		<script src="https://d3js.org/d3.v4.min.js"></script>
-		<script type="text/javascript" src="js/contact.js"></script>
+
 	</body>
 </html>

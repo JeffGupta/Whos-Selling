@@ -64,9 +64,6 @@ We will add more features to this later, in particular comparing local prices on
 
 
 Frank:
-I used the Firebase implementation of oAuth to authenticate a user. 
-
-
 Registration with Firebase - IMPLEMENTED (4) A new user to AF-Books may create a registration upon completing the required fields. 
 The application checks to ensure that the email address is unique and is a valid GMU email address. 
 After registering a message will prompt telling the user the registration is completed. 
