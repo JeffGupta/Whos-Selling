@@ -1,4 +1,4 @@
-
+//setcookie isgoogle to true, getcookie(isgoogle) and check if google login
 	// Initialize Firebase
 	"use strict";
 	var config = {
@@ -44,7 +44,7 @@
 			);
 		}
 	});
-	
+	/*
 	var AccountDisplay = React.createClass({
 		propTypes: {
 			username: React.PropTypes.string,
@@ -138,5 +138,64 @@
 			major.appendChild(document.createTextNode("Major: " + major_data));
 		}
 	});
+	
+	ReactDOM.render(<AccountView />,document.getElementById('account_panel'));
+	*/
+	
+	var AccountDisplay = React.createClass({
+		propTypes: {
+			email: React.PropTypes.string,
+			name: React.PropTypes.string
+		},
+		
+		getDefaultProps: function() {
+			email: ""
+			name: ""
+		},
+		
+		render: function() {
+			return (
+				<div>
+					<u1>
+						<li id="email_label">{this.props.email}</li>
+						<li id="name_label">{this.props.name}</li>
+					</u1>
+				</div>
+			);
+		},
+		
+		componentDidMount: function() {
+			var $this = $(ReactDOM.findDOMNode(this));
+			account_username = getCookie("username"); //first grab the username from cookies
+			this.putData();
+		},
+		
+		putData: function() {
+			//grab appropriate html elements
+			var email = document.getElementById("email_label");
+			var name = document.getElementById("name_label");
+			
+			//create paths to attributes
+			const databaseURL = "https://whos-selling.firebaseio.com";
+			var googleURL = databaseURL + "/googles/" + emailToKey(account_username);
+			var nameURL = googleURL + "/name.json";
+			console.log(googleURL);
+			console.log(nameURL);
+			var xhttp = new XMLHttpRequest();
+			
+			xhttp.open("GET",nameURL,false);
+			xhttp.send();
+			var data = xhttp.responseText;
+			var name_data = JSON.parse(data);
+			
+			//append data
+			email.appendChild(document.createTextNode("Email: " + account_username));
+			name.appendChild(document.createTextNode("Name: " + JSON.parse(data)));
+		}
+	});
+	
+	function emailToKey(emailAddress) {
+		return emailAddress.replace(/[.]/g, '%20');
+	}
 	
 	ReactDOM.render(<AccountView />,document.getElementById('account_panel'));
