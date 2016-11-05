@@ -42,6 +42,10 @@ $(document).ready(function()
 	  render: function() {
 		return (
 		    React.createElement('form', {onSubmit: this.onSubmit, className: 'listform', noValidate: true},
+				React.createElement('button', {
+				  type: 'submit'},
+				  'Preview Listing'),
+				  
 				React.createElement('h2', {
 				  className: ''},
 				  'List an Item'),
@@ -59,18 +63,19 @@ $(document).ready(function()
 				  value: this.props.value.condition,
 				  onChange: this.onConditionChange,
 				}),
-				React.createElement('textarea', {
+				React.createElement('input', {
 				  className: 'radius',
+				  type: 'text', 
 				  placeholder: 'Description',
 				  value: this.props.value.description,
 				  onChange: this.onDescriptionChange,
-				}),
-				React.createElement('button', {
-				  type: 'submit'},
-				  'Preview Listing')
+				})
+				  
 			)
+			
 		);
 	  },
+
 	});
 	
 	//class encapsulates a single item in the list

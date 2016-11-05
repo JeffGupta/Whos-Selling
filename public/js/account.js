@@ -179,6 +179,7 @@
 			const databaseURL = "https://whos-selling.firebaseio.com";
 			var googleURL = databaseURL + "/googles/" + emailToKey(account_username);
 			var nameURL = googleURL + "/name.json";
+			console.log(googleURL);
 			console.log(nameURL);
 			var xhttp = new XMLHttpRequest();
 			
@@ -189,7 +190,7 @@
 			
 			//append data
 			email.appendChild(document.createTextNode("Email: " + account_username));
-			name.appendChild(document.createTextNode("Name: " + name_data));
+			name.appendChild(document.createTextNode("Name: " + JSON.parse(data)));
 		}
 	});
 	
