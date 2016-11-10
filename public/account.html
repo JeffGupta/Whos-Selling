@@ -37,6 +37,33 @@
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+		<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/operations.js"></script>
+		<script src="js/login.js"></script>
+		
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		
+		<!--Google Sign In-->
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<meta name="google-signin-client_id" content="512922207100-7gipp0ajd1nrulv5177on1u4ce3jj630.apps.googleusercontent.com">
+		
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	</head>
 	<body>
 
@@ -82,9 +109,30 @@
 										</div>
 								</header>
 								<p align="left"><b>Placeholder for account options</b><br>
+									<div class="g-signin2" data-onsuccess="onSignIn"></div>
+									<script>
+										  console.log('User signed in.');
+										 function onSignIn(googleUser) {
+										  var profile = googleUser.getBasicProfile();
+										  addattempt(profile.getEmail(),profile.getName());
+										 }
+										console.log('User onSignIn.');
+
+										// auth2 is initialized with gapi.auth2.init() and a user is signed in.
+									</script>
+									<a href="#" onclick="signOut();">Sign out</a>
+									<script>
+									  function signOut() {
+										var auth2 = gapi.auth2.getAuthInstance();
+										auth2.signOut().then(function () {
+										  console.log('User signed out.');
+										});
+									  }
+									</script>
 							</section>
 						</div>
 					<!-- Sidebar -->
+					
 				
 					<!-- Content -->
 						<div id="content" class="8u skel-cell-important">
