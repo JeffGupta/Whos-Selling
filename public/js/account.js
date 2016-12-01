@@ -167,6 +167,7 @@
 		componentDidMount: function() {
 			var $this = $(ReactDOM.findDOMNode(this));
 			account_username = getCookie("username"); //first grab the username from cookies
+			name = getCookie("name"); 
 			this.putData();
 		},
 		
@@ -190,7 +191,7 @@
 			
 			//append data
 			email.appendChild(document.createTextNode("Email: " + account_username));
-			name.appendChild(document.createTextNode("Name: " + JSON.parse(data)));
+			name.appendChild(document.createTextNode("Username: " + account_username));
 		}
 	});
 	
